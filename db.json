@@ -1,0 +1,639 @@
+{
+  "researchers": [
+    {
+      "id": 0,
+      "name": "Abiola O. Makinwa",
+      "institution": "Hauge University of Applied Science",
+      "workLocation": "Europe",
+      "gender": "Female",
+      "yearPhD": 2011,
+      "website": "https://www.linkedin.com/in/abiola-makinwa-78607b9",
+      "workingGroup": [
+        "Rule of Law"
+      ],
+      "regionOfExpertise": [],
+      "fieldOfResearch": "Law & Justice"
+    },
+    {
+      "id": 1,
+      "name": "Alan Bryden",
+      "institution": "DCAF",
+      "workLocation": "Europe",
+      "gender": "Male",
+      "yearPhD": 2010,
+      "website": "http://www.dcaf.ch/Person/Alan-Bryden",
+      "workingGroup": [
+        "SSR"
+      ],
+      "regionOfExpertise": [],
+      "fieldOfResearch": "Governance & Statebuilding"
+    },
+    {
+      "id": 2,
+      "name": "Albrecht Schnabel",
+      "institution": "DCAF",
+      "workLocation": "Europe",
+      "gender": "Male",
+      "yearPhD": 1995,
+      "website": "http://www.dcaf.ch/Person/Albrecht-Schnabel",
+      "workingGroup": [
+        "SSR"
+      ],
+      "regionOfExpertise": [
+        "Southeast Asia",
+        "Asia-Pacific region"
+      ],
+      "fieldOfResearch": "SSR"
+    },
+    {
+      "id": 3,
+      "name": "Amanda Perry-Kessaris",
+      "institution": "University of Kent",
+      "workLocation": "Europe",
+      "gender": "Female",
+      "yearPhD": 0,
+      "website": "https://www.kent.ac.uk/law/people/academic/Perry-Kessaris,_Amanda.html; https://econosociolegal.wordpress.com/",
+      "workingGroup": [
+        "Rule of Law"
+      ],
+      "regionOfExpertise": [
+        "Asia"
+      ],
+      "fieldOfResearch": "Law & Justice"
+    },
+    {
+      "id": 4,
+      "name": "Ana Arjona",
+      "institution": "Northwestern University",
+      "workLocation": "Usa",
+      "gender": "Female",
+      "yearPhD": 0,
+      "website": "http://www.polisci.northwestern.edu/people/core-faculty/ana-arjona.html",
+      "workingGroup": [
+        "PKO",
+        "Prevention"
+      ],
+      "regionOfExpertise": [
+        "South Africa",
+        "Niger",
+        "Latin America"
+      ],
+      "fieldOfResearch": "Political Violence & Elections"
+    },
+    {
+      "id": 4,
+      "name": "Anders Themnér",
+      "institution": "Uppsala Universitet",
+      "workLocation": "Europe",
+      "gender": "Male",
+      "yearPhD": 0,
+      "website": "http://www.pcr.uu.se/about/staff/nilsson_a/",
+      "workingGroup": [
+        "PKO"
+      ],
+      "regionOfExpertise": [
+        "Republic of Congo",
+        "Sierra Leone"
+      ],
+      "fieldOfResearch": "DDR"
+    },
+    {
+      "id": 5,
+      "name": "Andrea Ruggeri",
+      "institution": "Oxford University",
+      "workLocation": "Europe",
+      "gender": "Male",
+      "yearPhD": 2011,
+      "website": "https://www.bnc.ox.ac.uk/about-brasenose/academic-staff/484-dr-andrea-ruggeri; https://oxford.academia.edu/andrearuggeri; http://www.aruggeri.eu",
+      "workingGroup": [
+        "PKO"
+      ],
+      "regionOfExpertise": [
+        "Liberia",
+        "Republic of Congo",
+        "Sierra Leone",
+        "Middle East"
+      ],
+      "fieldOfResearch": "Law & Justice"
+    },
+    {
+      "id": 6,
+      "name": "Andrea Schneiker",
+      "institution": "University of Siegen",
+      "workLocation": "Europe",
+      "gender": "Female",
+      "yearPhD": 2008,
+      "website": "http://www.uni-siegen.de/phil/sozialwissenschaften/politik/mitarbeiter/andrea_schneiker/index.html.en?lang=en",
+      "workingGroup": [
+        "1325"
+      ],
+      "regionOfExpertise": [],
+      "fieldOfResearch": "Governance & Statebuilding"
+    },
+    {
+      "id": 7,
+      "name": "Andreas Moberg",
+      "institution": "University of Gothenburg",
+      "workLocation": "Europe",
+      "gender": "Male",
+      "yearPhD": 2009,
+      "website": "http://gu.se/omuniversitetet/personal?userId=xmoban",
+      "workingGroup": [
+        "Rule of Law"
+      ],
+      "regionOfExpertise": [],
+      "fieldOfResearch": "Law & Justice"
+    },
+    {
+      "id": 8,
+      "name": "Andrew Levin",
+      "institution": "Swarthmore College",
+      "workLocation": "Usa",
+      "gender": "Male",
+      "yearPhD": 2015,
+      "website": "http://katalog.uu.se/empinfo/?id=N99-1684",
+      "workingGroup": [
+        "PKO"
+      ],
+      "regionOfExpertise": [],
+      "fieldOfResearch": "Peacebuilding & Peacemaking"
+    },
+    {
+      "id": 9,
+      "name": "Andrew Michels",
+      "institution": "George Washington University",
+      "workLocation": "Usa",
+      "gender": "Male",
+      "yearPhD": 0,
+      "website": "https://www.linkedin.com/in/andrewmichaels",
+      "workingGroup": [
+        "SSR"
+      ],
+      "regionOfExpertise": [
+        "Afghanistan",
+        "Pakistan",
+        "Kosovo",
+        "Jamaica"
+      ],
+      "fieldOfResearch": "Peacebuilding & Peacemaking"
+    },
+    {
+      "id": 10,
+      "name": "Angela Ndinga-Sellström",
+      "institution": "ACCORD & Uppsala Universitet",
+      "workLocation": "Europe",
+      "gender": "Female",
+      "yearPhD": 2015,
+      "website": "http://www.pcr.uu.se/about/staff/muvumbasellstrom_a/",
+      "workingGroup": [
+        "1325"
+      ],
+      "regionOfExpertise": [
+        "Burundi",
+        "South Africa"
+      ],
+      "fieldOfResearch": "Gender"
+    },
+    {
+      "id": 11,
+      "name": "Anita Schølset",
+      "institution": "HIOA",
+      "workLocation": "Europe",
+      "gender": "Female",
+      "yearPhD": 0,
+      "website": "https://www.hioa.no/eng/employee/anisch",
+      "workingGroup": [
+        "1325"
+      ],
+      "regionOfExpertise": [],
+      "fieldOfResearch": ""
+    },
+    {
+      "id": 12,
+      "name": "Anna Jonsson Cornell",
+      "institution": "Uppsala University",
+      "workLocation": "Europe",
+      "gender": "Female",
+      "yearPhD": 0,
+      "website": "http://katalog.uu.se/profile/?id=N99-1684",
+      "workingGroup": [
+        "Rule of Law"
+      ],
+      "regionOfExpertise": [],
+      "fieldOfResearch": "Law & Justice"
+    },
+    {
+      "id": 13,
+      "name": "Ben Oppenheim",
+      "institution": "Center on International Cooperation",
+      "workLocation": "Usa",
+      "gender": "Male",
+      "yearPhD": 0,
+      "website": "https://www.linkedin.com/in/ben-oppenheim-757182",
+      "workingGroup": [
+        "PKO"
+      ],
+      "regionOfExpertise": [],
+      "fieldOfResearch": "Terrorism"
+    },
+    {
+      "id": 14,
+      "name": "Bernd Beber",
+      "institution": "New York University",
+      "workLocation": "Usa",
+      "gender": "Male",
+      "yearPhD": 0,
+      "website": "",
+      "workingGroup": [
+        "PKO",
+        "1325"
+      ],
+      "regionOfExpertise": [],
+      "fieldOfResearch": "Third-party interventions"
+    },
+    {
+      "id": 15,
+      "name": "Chandra Sriram",
+      "institution": "University of East London",
+      "workLocation": "Europe",
+      "gender": "Female",
+      "yearPhD": 2000,
+      "website": "https://www.uel.ac.uk/Staff/s/chandra-sriram",
+      "workingGroup": [
+        "Rule of Law"
+      ],
+      "regionOfExpertise": [
+        "Sri Lanka",
+        "Colombia"
+      ],
+      "fieldOfResearch": "Law & Justice"
+    },
+    {
+      "id": 16,
+      "name": "Christian Dennys",
+      "institution": "UK Department for International Development",
+      "workLocation": "Europe",
+      "gender": "Male",
+      "yearPhD": 2012,
+      "website": "https://uk.linkedin.com/in/christian-dennys-b6128b94",
+      "workingGroup": [
+        "SSR"
+      ],
+      "regionOfExpertise": [
+        "Burundi",
+        "Afghanistan",
+        "Sri Lanka"
+      ],
+      "fieldOfResearch": "Conflicts"
+    },
+    {
+      "id": 17,
+      "name": "Clark Lombardi",
+      "institution": "University of Washington",
+      "workLocation": "Usa",
+      "gender": "Male",
+      "yearPhD": 2001,
+      "website": "https://www.law.washington.edu/directory/profile.aspx?ID=142",
+      "workingGroup": [
+        "Rule of Law"
+      ],
+      "regionOfExpertise": [
+        "Egypt",
+        "Afghanistan",
+        "Turkey",
+        "Pakistan",
+        "Yemen"
+      ],
+      "fieldOfResearch": "Law & Justice"
+    },
+    {
+      "id": 18,
+      "name": "Cyrus Samii",
+      "institution": "New York University",
+      "workLocation": "Usa",
+      "gender": "Male",
+      "yearPhD": 2011,
+      "website": "http://cyrussamii.com/",
+      "workingGroup": [
+        "PKO",
+        "SSR"
+      ],
+      "regionOfExpertise": [
+        "Liberia",
+        "Cote d’Ivoire",
+        "Kenya",
+        "Tanzania",
+        "Burundi",
+        "Indonesia",
+        "Nepal",
+        "Afghanistan",
+        "Israel/Palestine",
+        "Colombia"
+      ],
+      "fieldOfResearch": "Conflicts"
+    },
+    {
+      "id": 19,
+      "name": "Dara Cohen",
+      "institution": "Harvard University",
+      "workLocation": "Usa",
+      "gender": "Female",
+      "yearPhD": 2010,
+      "website": "https://www.hks.harvard.edu/about/faculty-staff-directory/dara-kay-cohen",
+      "workingGroup": [
+        "1325"
+      ],
+      "regionOfExpertise": [
+        "Sierra Leone",
+        "Timor",
+        "El Salvador",
+        "Haiti"
+      ],
+      "fieldOfResearch": "Political Violence & Elections"
+    },
+    {
+      "id": 20,
+      "name": "David Cunningham",
+      "institution": "University of Maryland",
+      "workLocation": "Usa",
+      "gender": "Male",
+      "yearPhD": 2006,
+      "website": "http://www.davidcunninghampolisci.com/",
+      "workingGroup": [
+        "Prevention"
+      ],
+      "regionOfExpertise": [
+        "Sub-Saharan Africa"
+      ],
+      "fieldOfResearch": "Conflicts"
+    },
+    {
+      "id": 21,
+      "name": "David M. Quinn",
+      "institution": "University of Maryland",
+      "workLocation": "Usa",
+      "gender": "Male",
+      "yearPhD": 0,
+      "website": "",
+      "workingGroup": [
+        "Prevention"
+      ],
+      "regionOfExpertise": [
+        "Africa"
+      ],
+      "fieldOfResearch": "Mediation & Negotiation"
+    },
+    {
+      "id": 22,
+      "name": "Dennis Jett",
+      "institution": "Penn State University",
+      "workLocation": "Usa",
+      "gender": "Male",
+      "yearPhD": 1998,
+      "website": "https://sia.psu.edu/faculty/jett",
+      "workingGroup": [
+        "Prevention"
+      ],
+      "regionOfExpertise": [
+        "Africa",
+        "Liberia",
+        "Mozambique",
+        "Peru"
+      ],
+      "fieldOfResearch": "Terrorism"
+    },
+    {
+      "id": 23,
+      "name": "Desiree Nilsson",
+      "institution": "Uppsala Universitet",
+      "workLocation": "Europe",
+      "gender": "Female",
+      "yearPhD": 0,
+      "website": "http://www.pcr.uu.se/about/staff/nilsson_d/",
+      "workingGroup": [
+        "PKO"
+      ],
+      "regionOfExpertise": [
+        "Africa",
+        "Liberia",
+        "Sierra Leone"
+      ],
+      "fieldOfResearch": "Conflicts"
+    },
+    {
+      "id": 24,
+      "name": "Doug Gibler",
+      "institution": "University of Alabama",
+      "workLocation": "Usa",
+      "gender": "Male",
+      "yearPhD": 1997,
+      "website": "http://dmgibler.people.ua.edu/",
+      "workingGroup": [
+        "Prevention"
+      ],
+      "regionOfExpertise": [],
+      "fieldOfResearch": "Conflicts"
+    },
+    {
+      "id": 25,
+      "name": "Dylan Hendrickson",
+      "institution": "Kings College",
+      "workLocation": "Europe",
+      "gender": "Male",
+      "yearPhD": 1995,
+      "website": "http://www.kcl.ac.uk/sspp/departments/warstudies/people/researchers/hendrickson.aspx",
+      "workingGroup": [
+        "SSR"
+      ],
+      "regionOfExpertise": [
+        "Africa",
+        "Asia",
+        "Middle East",
+        "Latin America"
+      ],
+      "fieldOfResearch": "SSR"
+    },
+    {
+      "id": 26,
+      "name": "Eboe Hutchful",
+      "institution": "African Security Dialogue and Research (ASDR)",
+      "workLocation": "Africa",
+      "gender": "Male",
+      "yearPhD": 2010,
+      "website": "clas.wayne.edu/ehutchf",
+      "workingGroup": [
+        "SSR"
+      ],
+      "regionOfExpertise": [
+        "Africa",
+        "Ghana"
+      ],
+      "fieldOfResearch": "SSR"
+    },
+    {
+      "id": 27,
+      "name": "Elin Bjarnegård",
+      "institution": "Uppsala Universitet",
+      "workLocation": "Europe",
+      "gender": "Female",
+      "yearPhD": 2010,
+      "website": "www.pcr.uu.se",
+      "workingGroup": [
+        "1325"
+      ],
+      "regionOfExpertise": [
+        "Cambodia",
+        "Myanmar",
+        "Thailand"
+      ],
+      "fieldOfResearch": "Gender"
+    },
+    {
+      "id": 28,
+      "name": "Elin Cohen",
+      "institution": "Former: Washington University",
+      "workLocation": "Usa",
+      "gender": "Female",
+      "yearPhD": 2010,
+      "website": "https://www.linkedin.com/in/elincohen",
+      "workingGroup": [
+        "Rule of Law"
+      ],
+      "regionOfExpertise": [
+        "Kenya",
+        "Mali",
+        "Ethiopia",
+        "Senegal",
+        "Benin",
+        "Liberia",
+        "Mozambique"
+      ],
+      "fieldOfResearch": "Governance & Statebuilding"
+    },
+    {
+      "id": 29,
+      "name": "Elisabeth King",
+      "institution": "New York University",
+      "workLocation": "Usa",
+      "gender": "Female",
+      "yearPhD": 2008,
+      "website": " www.elisabethking.ca",
+      "workingGroup": [
+        "PKO"
+      ],
+      "regionOfExpertise": [
+        "Sub-Saharan Africa",
+        "Kenya",
+        "Liberia",
+        "Tanzania",
+        "Rwanda",
+        "India",
+        "Philippines",
+        "Croatia"
+      ],
+      "fieldOfResearch": "Peacebuilding & Peacemaking"
+    },
+    {
+      "id": 30,
+      "name": "Elisabeth Wood",
+      "institution": "Yale University",
+      "workLocation": "Usa",
+      "gender": "Female",
+      "yearPhD": 1995,
+      "website": "http://elisabethwood.commons.yale.edu/",
+      "workingGroup": [
+        "1325"
+      ],
+      "regionOfExpertise": [
+        "Africa",
+        "South Africa",
+        "Sri Lanka",
+        "Latin America",
+        "Colombia",
+        "El Salvador",
+        "Peru"
+      ],
+      "fieldOfResearch": "Political Violence & Elections"
+    },
+    {
+      "name": "Emily Wiseman",
+      "institution": "Graduate Institute, Geneva",
+      "workLocation": "Europe",
+      "gender": "Female",
+      "yearPhD": 2015,
+      "website": "",
+      "workingGroup": [
+        "1325"
+      ],
+      "regionOfExpertise": [
+        "Haiti"
+      ],
+      "fieldOfResearch": "Gender",
+      "id": 31
+    },
+    {
+      "name": "Enzo Nussio",
+      "institution": "ETH Zurich",
+      "workLocation": "Europe",
+      "gender": "Male",
+      "yearPhD": 1980,
+      "website": "http://www.css.ethz.ch/ueber-uns/personen/nussio-enzo.html",
+      "workingGroup": [
+        "PKO"
+      ],
+      "regionOfExpertise": [
+        "Colombia"
+      ],
+      "fieldOfResearch": "Peacebuilding & Peacemaking",
+      "id": 32
+    },
+    {
+      "name": "Eric Mvukiyehe",
+      "institution": "Worldbank ",
+      "workLocation": "Usa",
+      "gender": "Male",
+      "yearPhD": 2013,
+      "website": "http://www.worldbank.org/en/about/people/eric-mvukiyehe",
+      "workingGroup": [
+        "1325"
+      ],
+      "regionOfExpertise": [
+        "Africa"
+      ],
+      "fieldOfResearch": "Peacebuilding & Peacemaking",
+      "id": 33
+    },
+    {
+      "name": "Erik Melander",
+      "institution": "Uppsala Universitet",
+      "workLocation": "Europe",
+      "gender": "Male",
+      "yearPhD": 1980,
+      "website": "http://www.pcr.uu.se/about/staff/Erik_Melander/",
+      "workingGroup": [
+        "1325"
+      ],
+      "regionOfExpertise": [
+        "Asia"
+      ],
+      "fieldOfResearch": "Conflicts",
+      "id": 34
+    },
+    {
+      "name": "Erik Wennerström",
+      "institution": "Swedish National Council for Crime Prevention ",
+      "workLocation": "Europe",
+      "gender": "Male",
+      "yearPhD": 2007,
+      "website": "https://se.linkedin.com/in/erik-wennerstr%C3%B6m-907ba91",
+      "workingGroup": [
+        "Rule of Law"
+      ],
+      "regionOfExpertise": [
+        "EU"
+      ],
+      "fieldOfResearch": "Law & Justice",
+      "id": 35
+    }
+  ]
+}
