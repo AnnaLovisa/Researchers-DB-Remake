@@ -1,12 +1,12 @@
 
-const ROOT_URL = ''
+const ROOT_URL = 'http://localhost:3000/researchers';
 
-export const FETCH_RESEARCHER = 'FETCH_RESEARCHER';
+export const FETCH_RESEARCHER_REQUEST = 'FETCH_RESEARCHER_REQUEST';
 
 export function fetchResearchers() {
 
   return {
-    type: 'FETCH_RESEARCHER'
+    type: 'FETCH_RESEARCHER_REQUEST'
   }
 }
 
