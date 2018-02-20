@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SearchBar = (props) => {
+const SearchMenu = (props) => {
     return (
           <select name={props.selectName}>
             <option default value>{props.selectLabels}</option>
@@ -8,4 +8,4 @@ const SearchBar = (props) => {
     );
 }
 
-export default SearchBar;
+export default SearchMenu;

@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from './Button';
-import SearchBar from './SearchBar';
+import SearchMenu from './Search_menu';
 
 const SearchBarContainer = () => {
     return (
