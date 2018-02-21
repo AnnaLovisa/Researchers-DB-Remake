@@ -1,8 +1,14 @@
-export default () => {
-  return [
-    { name: 'Hanna', age: 10 },
-    { name: 'Pelle', age: 4 },
-    { name: 'Erik', age: 7 },
-    { name: 'Olle', pages: 8 }
-  ]
+import { FETCH_RESEARCHER } from '../actions/index';
+
+export default function (state = [], action) {
+  //The action comes from our promise in the payload in our actioncreator
+  //So the reducer only wants the data, not a promise
+  switch (action.type) {
+  case FETCH_RESEARCHER:  
+    console.log('Action received', action);   
+    return [ action.payload.data, ...state ] //It takes all the entries from our state-array and put it in our new array
+    break;
+  }    
+  return state;
+
 }

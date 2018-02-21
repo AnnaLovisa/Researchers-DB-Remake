@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import fetchResearchers from '../actions/index';
 
 class SearchBar extends Component {
 
@@ -7,18 +10,20 @@ class SearchBar extends Component {
   }
 
   onInputChange = (event) => {
-    console.log(event.target.value);
     this.setState({ inputValue : event.target.value })
   }
 
   onFormSubmit = (event) => {
     event.preventDefault();
+
+    this.props.fetchResearchers(this.state.inputValue);
+    this.setState({ inputValue: '' });
   }
 
     render() {
 
     this.onInputChange = this.onInputChange.bind(this);
-      
+    this.onFormSubmit = this.onFormSubmit.bind(this);
 
     return (
       <form onSubmit={this.onFormSubmit} className="input-group">
@@ -31,11 +36,18 @@ class SearchBar extends Component {
                value={this.state.inputValue}
                onChange={this.onInputChange}
         />
+        <span className="input-group-btn">
+          <button type="submit" className="btn btn-secondary">Submit</button>
+        </span>
         <ul className="suggestions"></ul>
       </form>
     );
   }
 }
 
-export default SearchBar;
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({ fetchResearchers }, dispatch);
+}
+
+export default connect(null, mapDispatchToProps)(SearchBar);
 
