@@ -7,7 +7,7 @@ export default function (state = [], action) {
   case FETCH_RESEARCHER:  
     console.log('Action received', action);   
     return [ action.payload.data, ...state ] //It takes all the entries from our state-array and put it in our new array
-    break;
+
   }    
   return state;
 

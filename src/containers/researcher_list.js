@@ -3,16 +3,17 @@ import { connect } from 'react-redux';
 
 class ResearcherList extends Component {
   
+  renderResearchers = (researcher, index) => {
+    return (
+      <li key={index}>{researcher[index].name}</li>
+    )
+  }
 
   render() {
-
-    const researcherList = this.props.researchers.map((researcher, index) => {
-      return <li key={index}>{researcher.name}</li>
-    })
-
+    
     return (      
       //Rendering out the state of the researchers
-      <ul>{researcherList}</ul>
+      <ul>{this.props.researchers.map(this.renderResearchers)}</ul>
     )
   }
 } 
