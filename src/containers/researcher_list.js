@@ -16,7 +16,7 @@ class ResearcherList extends Component {
     )
   }
 } 
-
+ 
 function mapStateToProps({ researchers }) {
   return { researchers };
 }
