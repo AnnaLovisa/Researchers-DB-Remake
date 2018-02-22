@@ -1,27 +1,36 @@
 import axios from 'axios';
+/* import { searchUrl, fetchAll } from './shared'; */
+import * as actionTypes from './actionTypes';
+
 
 const ROOT_URL = 'http://localhost:3000/researchers';
 
-//Constants
-export const FETCH_RESEARCHER = 'FETCH_RESEARCHER';
-
-
 //Actioncreators
 export default function fetchResearchers(name) {
-
   const url = `${ROOT_URL}?name=${name}`;
   const request = axios.get(url); //Request is our promise
-  console.log('request', request);
   //The purpose of Redux-Promise Middleware: Redux stops the action and dispatches a new action of the same type
   //but with the payload of the resolved request. This is to be sent into the reducer. So it unwraps 
   //the promise for us.
   return {
-    type: 'FETCH_RESEARCHER',
+    type: actionTypes.FETCH_RESEARCHER,
     payload: request 
   }
 }
 
+export const fetchAll = () => {
+  
+    const request = axios.get(ROOT_URL);
+    console.log('request', request);
+  
+    return {
+      type: actionTypes.FETCH_ALL_RESEARCHERS,
+      payload: request
+    }
+  
+  }
 
+/*export const getUsersRequest = () => ({ type: actions.GET_USER_REQUEST }); */
 /* export function selectResearcher(researcher) { */
   //selectBook is an ActionCreator, it needs to return an action, an object with a type property.
   //The type of action is that a user selects a book, thereof the name of the function.

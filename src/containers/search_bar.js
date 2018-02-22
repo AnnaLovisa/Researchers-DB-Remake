@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import fetchResearchers from '../actions/index';
+import fetchResearchers from '../actions/researcherActions';
 
 class SearchBar extends Component {
 
@@ -39,7 +39,7 @@ class SearchBar extends Component {
         <span className="input-group-btn">
           <button type="submit" className="btn btn-secondary">Submit</button>
         </span>
-        <ul className="suggestions"></ul>
+        {/* <ul className="suggestions"></ul> */}
       </form>
     );
   }
