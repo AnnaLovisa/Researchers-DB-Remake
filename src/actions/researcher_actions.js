@@ -31,7 +31,7 @@ export function researcherItemsFetchData(ROOT_URL) {
   return (dispatch) => {
       dispatch(researcherItemsIsLoading(true));
 
-      fetch(url)
+      fetch(ROOT_URL)
           .then((response) => {
               if (!response.ok) {
                   throw Error(response.statusText);

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import * as researcherActions from '../actions/researcherActions';
+import { researcherItemsFetchData } from '../actions/researcher_actions';
 import Button from '../components/Button';
 
 class FetchAll extends Component {
@@ -11,7 +11,7 @@ class FetchAll extends Component {
   }
 
   handleonClick = () => {
-    researcherActions.fetchAll();
+    this.props
   }
   
   render() {
@@ -23,7 +23,7 @@ class FetchAll extends Component {
 }
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ researcherActions }, dispatch);
+  return bindActionCreators({ researcherItemsFetchData }, dispatch);
 }
 
 export default connect(null, mapDispatchToProps)(FetchAll);

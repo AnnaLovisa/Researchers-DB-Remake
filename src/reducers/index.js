@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux';
-import ResearchersReducer from './researcher_reducer';
+import { researcherItems, researcherItemsIsLoading, researcherItemsHasErrored } from './researcher_reducer';
 
 const rootReducer = combineReducers({
-  researchers: ResearchersReducer,
+  researcherItems,
+  researcherItemsIsLoading,
+  researcherItemsHasErrored
 });
 
 export default rootReducer;
