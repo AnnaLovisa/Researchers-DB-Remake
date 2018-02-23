@@ -1,19 +1,19 @@
 import React from 'react';
-import FetchAll from '../containers/fetch_all';
-/* import SearchMenu from './Search_menu'; */
+import SearchMenu from '../containers/search_menus';
 
-const PrimarySearch = () => {
+
+const DisplaySearchMenu = () => {
 
     return (
       <div className="row justify-content-center mt-2">
         <div className="col-xs-2">
-          <FetchAll />
+          <SearchMenu />
         </div>
       </div>
     );
 }
 
-export default PrimarySearch;
+export default DisplaySearchMenu;
 
 
 {

@@ -4,20 +4,20 @@ import { connect } from 'react-redux';
 class ResearcherList extends Component {
 
   render() {
-
-    const researcherList = this.props.researchers.map((item, index) => {
+    //action creator som endast hämtar vald
+    /* const researcherList = this.props. .map((item, index) => {
       return <li key={index}>{item[0].institution}</li>
-    })
+    }) */
     
     return (      
       //Rendering out the state of the researchers
-      <ul>{researcherList}</ul>
+      {/* <ul>{researcherList}</ul> */}
     )
   }
 } 
  
-function mapStateToProps({ researchers }) {
-  return { researchers: researchers };
+function mapStateToProps({  }) {
+  return {  };
 }
 
 export default connect(mapStateToProps)(ResearcherList)

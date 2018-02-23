@@ -2,7 +2,6 @@ import axios from 'axios';
 /* import { searchUrl, fetchAll } from './shared'; */
 import * as actionTypes from './actionTypes';
 
-const ROOT_URL = 'http://localhost:3000/researchers';
 
 //Actioncreators for researcherActions
 
@@ -20,18 +19,18 @@ export function researcherItemsIsLoading(bool) {
   };
 }
 
-export function researcherItemsFetchDataSuccess(resarcherItems) {
+export function researcherItemsFetchDataSuccess(researcherItems) {
   return {
       type: 'RESEARCHER_ITEMS_FETCH_DATA_SUCCESS',
       researcherItems
   };
 }
 
-export function researcherItemsFetchData(ROOT_URL) {
+export function researcherItemsFetchData(url) {
   return (dispatch) => {
       dispatch(researcherItemsIsLoading(true));
 
-      fetch(ROOT_URL)
+      fetch(url)
           .then((response) => {
               if (!response.ok) {
                   throw Error(response.statusText);

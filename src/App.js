@@ -1,18 +1,17 @@
 import React, { Component } from 'react';
-/* import NavBar from './components/NavBar';
-import Header from './components/Header'; */
-/* import SearchBarComponent from './components/search_bar';
-import ResearcherList from './containers/researcher_list'; */
-import PrimarySearch from './components/primary_search';
-/*import SearchFieldContainer from './components/SearchFieldContainer';*/
-import DisplayResearchers from './components/display_researchers';
+/* import Navbar from './components/navbar';
+import Header from './components/header'; */
+/* import SearchTextfield from './components/search_textfield';
+import ResearcherList from './containers/researcher_list';
+import DisplaySearchMenu from './components/search_menus';*/
+import DisplayResearchers from './containers/researcher_display';
 /*import Footer from './components/Footer'; */
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <PrimarySearch />
+        {/* <DisplaySearchMenu /> */}
         <DisplayResearchers />
        {/*  <SearchBarComponent />
         <ResearcherList /> */}

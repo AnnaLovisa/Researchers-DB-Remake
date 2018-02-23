@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { fetchByName } from '../actions/researcher_actions';
 
-class SearchBar extends Component {
+class SearchTextfield extends Component {
 
   state = {
     inputValue: ''
@@ -16,7 +16,7 @@ class SearchBar extends Component {
   onFormSubmit = (event) => {
     event.preventDefault();
 
-    this.props.fetchByName(this.state.inputValue);
+    this.props.fetchByName(this.state.inputValue); //denna har jag inte inkluderat i actions och reducers än
     this.setState({ inputValue: '' });
   }
 
@@ -49,5 +49,5 @@ function mapDispatchToProps(dispatch) {
   return bindActionCreators({ fetchByName }, dispatch);
 }
 
-export default connect(null, mapDispatchToProps)(SearchBar);
+export default connect(null, mapDispatchToProps)(SearchTextfield);
 

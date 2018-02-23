@@ -1,29 +1,16 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
-import { researcherItemsFetchData } from '../actions/researcher_actions';
-import Button from '../components/Button';
 
-class FetchAll extends Component {
 
-  researchers = {
-    researchers: []
-  }
+const ROOT_URL = 'http://localhost:3000/researchers';
 
-  handleonClick = () => {
-    this.props
-  }
+class SearchMenu extends Component {
+
+ 
   
   render() {
-    this.handleonClick = this.handleonClick.bind(this);
-    return (
-      <Button handleonClick={this.handleonClick} buttonLabels="Show all" />
-    )
+   
   }
 }
 
-function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ researcherItemsFetchData }, dispatch);
-}
 
-export default connect(null, mapDispatchToProps)(FetchAll);
+
+export default connect(null, mapDispatchToProps)(SearchMenu);
