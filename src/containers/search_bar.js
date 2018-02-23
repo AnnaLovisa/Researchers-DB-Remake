@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { fetchByName } from '../actions/researcherActions';
+import { fetchByName } from '../actions/researcher_actions';
 
 class SearchBar extends Component {
 

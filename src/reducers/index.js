@@ -1,10 +1,8 @@
 import { combineReducers } from 'redux';
-import ResearchersReducer from './reducer_researchers';
-import AnotherResearchersReducer from './reducer_fetch';
+import ResearchersReducer from './researcher_reducer';
 
 const rootReducer = combineReducers({
   researchers: ResearchersReducer,
-  fetchResearchers: AnotherResearchersReducer
 });
 
 export default rootReducer;
