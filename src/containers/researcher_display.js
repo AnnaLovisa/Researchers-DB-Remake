@@ -37,7 +37,7 @@ class DisplayResearchers extends Component {
       <div>
         <Button handleonClick={this.handleonClick} buttonLabels="Show all" />      
         {/*Rendering out the state of the researchers*/}
-        <div>{researchers}</div>
+        <div className="row display-researchers-style d-flex justify-content-center">{researchers}</div>
       </div>
     )
     

@@ -1,5 +1,31 @@
+body, html {
+  overflow-x: hidden; }
+
+.button-style {
+  height: 6vh;
+  width: auto;
+  background-color: transparent;
+  color: black;
+  border: 2px solid #32AF8C;
+  border-radius: 2px; }
+
+.button-style {
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s; }
+
+.button-style:hover {
+  background-color: #32AF8C; }
+
 .navigation-style {
   background-color: #E6E6E6;
   height: 12vh; }
+
+.researcher-card-style {
+  border: 1px solid #E6E6E6; }
+
+.shadow-style {
+  -webkit-box-shadow: 0 10px 6px -6px #777;
+  -moz-box-shadow: 0 10px 6px -6px #777;
+  box-shadow: 0 10px 6px -6px #777; }
 
 /*# sourceMappingURL=main.css.map */

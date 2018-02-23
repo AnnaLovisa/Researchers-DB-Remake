@@ -1,0 +1,17 @@
+.button-style {
+  height: 6vh;
+  width: auto;
+  background-color: transparent;
+  color: black;
+  border: 2px solid $color-green;
+  border-radius: 2px;
+}
+
+.button-style {
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+}
+
+.button-style:hover {
+  background-color: $color-green;
+}
