@@ -19,6 +19,10 @@ class DisplayResearchers extends Component {
 
     const researcher = this.props.researcherItems
     console.log(researcher);
+   
+    const researchers = this.props.researcherItems.map((item, index) => {
+      return <ResearcherDetails key={index} details={item} />
+    })
 
     if (this.props.hasErrored) {
       return <p>Sorry! There was an error loading the items</p>;
@@ -28,9 +32,6 @@ class DisplayResearchers extends Component {
       return <p>Loading…</p>;
     }
 
-    const researchers = this.props.researcherItems.map((item, index) => {
-      <ResearcherDetails key={index} details={item} />
-    })
     
     return (
       <div>
