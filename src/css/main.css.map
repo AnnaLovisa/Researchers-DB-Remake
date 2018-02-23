@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,iBAAkB;EAChB,gBAAgB,ECDL,OAAO;EDElB,MAAM,EAAE,IAAI",
+"sources": ["partials/_navbar.scss","modules/_colors.scss"],
+"names": [],
+"file": "main.css"
+}

@@ -3,8 +3,8 @@ import { connect } from 'react-redux';
 import ResearcherDetails from './researcher_details';
 import { researcherItemsFetchData } from '../actions/researcher_actions'; //Här ska fler actions läggas till sen
 import Button from '../components/button';
+import { ROOT_URL } from '../actions/shared';
 
-const ROOT_URL = 'http://localhost:3000/researchers';
 
 class DisplayResearchers extends Component {
 
