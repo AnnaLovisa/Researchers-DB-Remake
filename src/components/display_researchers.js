@@ -1,10 +1,10 @@
 import React from 'react';
-import ResearcherCard from './ResearcherCard';
+import ResearcherDetails from '../containers/researcher_details';
 
 const DisplayResearchers = () =>  {
     return (
-      <div className="row">
-        <ResearcherCard />
+      <div>
+        <ResearcherDetails />
       </div>
     );
 }

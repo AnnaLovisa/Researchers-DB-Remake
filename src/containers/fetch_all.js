@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import fetchAll from '../actions/researcherActions';
+import * as researcherActions from '../actions/researcherActions';
 import Button from '../components/Button';
 
 class FetchAll extends Component {
@@ -11,13 +11,11 @@ class FetchAll extends Component {
   }
 
   handleonClick = () => {
-    this.props.fetchAll();
+    researcherActions.fetchAll();
   }
   
   render() {
-
     this.handleonClick = this.handleonClick.bind(this);
-
     return (
       <Button handleonClick={this.handleonClick} buttonLabels="Show all" />
     )
@@ -25,7 +23,7 @@ class FetchAll extends Component {
 }
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ fetchAll }, dispatch);
+  return bindActionCreators({ researcherActions }, dispatch);
 }
 
 export default connect(null, mapDispatchToProps)(FetchAll);
