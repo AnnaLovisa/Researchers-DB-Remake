@@ -13,6 +13,10 @@ class DisplayResearchers extends Component {
     this.props.fetchData(ROOT_URL);
   }
 
+  handleonResetClick = () => {
+    //Reset state of  to an empty array
+  }
+
   render() {
 
     this.handleonClick = this.handleonClick.bind(this);
@@ -32,10 +36,14 @@ class DisplayResearchers extends Component {
       return <p>Loading…</p>;
     }
 
+    const listClass = 'col-sm-12 col-md-12 col-lg-12 list-group';
     
     return (
       <div>
-        <Button handleonClick={this.handleonClick} buttonLabels="Show all" />      
+        <div className="row display-researchers-style d-flex justify-content-center mt-4">
+          <Button handleonClick={this.handleonClick} buttonLabels="Show all" />
+          <Button handleonClick={this.handleonResetClick} buttonLabels="Reset" /> 
+          </div>     
         {/*Rendering out the state of the researchers*/}
         <div className="row display-researchers-style d-flex justify-content-center">{researchers}</div>
       </div>
@@ -59,3 +67,21 @@ function mapDispatchToProps(dispatch) {
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(DisplayResearchers);
+
+/*
+$(document).ready(function() {
+    $('#list').click(function(event){
+        event.preventDefault();
+        $('.researcher-box').addClass('col-sm-12 col-md-12 col-lg-12 list-group');
+        $('.item').addClass('list-group-item');
+    });
+
+    $('#grid').click(function(event){
+        event.preventDefault();
+        $('.researcher-box').removeClass('col-sm-12 col-md-12 col-lg-12 list-group');
+        $('.item').removeClass('list-group-item');
+        $('.researcher-box').addClass('col-sm-12 col-md-6 col-lg-3');
+    });
+});
+
+*/
