@@ -9,9 +9,15 @@ export function toggleDisplaySuccess(bool) {
   };
 }
 
-export function toggleDisplay() {
+export function toggleDisplayList() {
   return (dispatch) => {
       dispatch(toggleDisplaySuccess(true));   
+    }
+  }
+
+  export function toggleDisplayGrid() {
+    return (dispatch) => {
+      dispatch(toggleDisplaySuccess(false));
     }
   }
 
