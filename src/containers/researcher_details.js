@@ -2,11 +2,11 @@ import React from 'react';
 
 const ResearcherDetails = ({details}) => {
   return (
-    <div className="col-sm-12 col-md-4 col-lg-2 researcher-card-style shadow-style m-4">
-      <div className="item">
+    <div className='col-xs-2'>
+      <div className='item'>
         <p><strong>Name: </strong> {details.name}</p>
       </div>
-      <div className="item">
+      <div className='item'>
         <p><strong>Institution: </strong> {details.institution}</p>
       </div>
       <p><strong>Work Location: </strong> {details.workLocation}</p>
@@ -26,7 +26,7 @@ const ResearcherDetails = ({details}) => {
         <p><strong>Field of research: </strong> {details.fieldOfResearch}</p>
       </div>
       <div className='item'>
-        <p><a href="${details.website}">Visit website</a></p>
+        <p><a href='${details.website}'>Visit website</a></p>
       </div>
     </div>
   )  

@@ -1,8 +1,20 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { toggleDisplay } from '../actions/display_actions';
 import Header from './header'
 import ButtonLink from './button_link';
 
-const NavBar = () =>  {
+class NavBar extends Component {
+
+    handleonClick = () => {
+        console.log('so far working');
+        this.props.toggleList();
+    }
+
+    render() {
+
+    this.handleonClick = this.handleonClick.bind(this);
+
     return (
       <div className="row d-flex justify-content-between p-2 navigation-style">
         {/*This should only appear for admins*/}
@@ -12,20 +24,23 @@ const NavBar = () =>  {
         </div>
         <div className="col-xs-2">           
             <strong>Display</strong>
-            {/* <a href="" id="list" className="link-style"><i className="fa fa-th-list"></i>
-                List</a> <a href="" id="grid" className="btn">
-                <i className="fa fa-th"></i>Grid</a> */}
-                <ButtonLink handleonClick={this.handleonClick} buttonLabels="list" displayIcon="fa fa-th-list"></ButtonLink>
-                <ButtonLink handleonClick={this.handleonClick} buttonLabels="grid" displayIcon="fa fa-th"></ButtonLink>
-            <div className="row ">
+            <ButtonLink onClick={this.handleonClick} buttonLabels="list" displayIcon="fa fa-th-list"></ButtonLink>
+            {/* <ButtonLink handleButtonClick={props.handleButtonClick} buttonLabels="grid" displayIcon="fa fa-th"></ButtonLink> */}
+            {/* <div className="row ">
                 <div className="col-xs-12">
-                    <a href="" id="addlink" className="btn">
-                        Add new researcher</a>
+                    <ButtonLink handleButtonClick={props.handleButtonClick} buttonLabels="Add new researcher"></ButtonLink>
                 </div>
-            </div>
+            </div> */}
         </div>
       </div>
-    );
+    )};
 }
 
-export default NavBar;
+  
+  function mapDispatchToProps(dispatch) {
+    return {
+      toggleList: () => dispatch(toggleDisplay())
+    };
+  };
+  
+  export default connect(mapDispatchToProps)(NavBar);

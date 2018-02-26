@@ -1,9 +1,9 @@
-import * as actionTypes from '../actions/actionTypes';
+import { RESEARCHER_ITEMS_HAS_ERRORED, RESEARCHER_ITEMS_IS_LOADING, RESEARCHER_ITEMS_FETCH_DATA_SUCCESS } from '../actions/actionTypes';
 
 
 export function researcherItemsHasErrored(state = false, action) {
   switch (action.type) {
-      case 'RESEARCHER_ITEMS_HAS_ERRORED':
+      case RESEARCHER_ITEMS_HAS_ERRORED:
           return action.hasErrored;
 
       default:
@@ -13,7 +13,7 @@ export function researcherItemsHasErrored(state = false, action) {
 
 export function researcherItemsIsLoading(state = false, action) {
   switch (action.type) {
-      case 'RESEARCHER_ITEMS_IS_LOADING':
+      case RESEARCHER_ITEMS_IS_LOADING:
           return action.isLoading;
 
       default:
@@ -23,7 +23,7 @@ export function researcherItemsIsLoading(state = false, action) {
 
 export function researcherItems(state = [], action) {
   switch (action.type) {
-      case 'RESEARCHER_ITEMS_FETCH_DATA_SUCCESS':
+      case RESEARCHER_ITEMS_FETCH_DATA_SUCCESS:
           return action.researcherItems;
 
       default:

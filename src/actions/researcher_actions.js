@@ -1,27 +1,25 @@
-import axios from 'axios';
-/* import { searchUrl, fetchAll } from './shared'; */
-import * as actionTypes from './actionTypes';
+import { RESEARCHER_ITEMS_HAS_ERRORED, RESEARCHER_ITEMS_IS_LOADING, RESEARCHER_ITEMS_FETCH_DATA_SUCCESS } from './actionTypes';
 
 
 //Actioncreators for researcherActions
 
 export function researcherItemsHasErrored(bool) {
   return {
-      type: 'RESEARCHER_ITEMS_HAS_ERRORED',
+      type: RESEARCHER_ITEMS_HAS_ERRORED,
       hasErrored: bool
   };
 }
 
 export function researcherItemsIsLoading(bool) {
   return {
-      type: 'RESEARCHER_ITEMS_IS_LOADING',
+      type: RESEARCHER_ITEMS_IS_LOADING,
       isLoading: bool
   };
 }
 
 export function researcherItemsFetchDataSuccess(researcherItems) {
   return {
-      type: 'RESEARCHER_ITEMS_FETCH_DATA_SUCCESS',
+      type: RESEARCHER_ITEMS_FETCH_DATA_SUCCESS,
       researcherItems
   };
 }
