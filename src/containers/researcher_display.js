@@ -63,6 +63,7 @@ class DisplayResearchers extends Component {
 
 //Dessa nya states kommer från reducern
 function mapStateToProps(state) {
+  console.log(state.toggleDisplay);
   return { 
     researcherItems: state.researcherItems,
     hasErrored: state.researcherItemsHasErrored,

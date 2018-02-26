@@ -5,9 +5,9 @@ import Header from './header'
 import ButtonLink from './button_link';
 
 class NavBar extends Component {
-    //FÖRSÖKER KALLA PÅ DENNA FRÅN BUTTONLINK. BUTTONLINK FUNKAR, MEN REDUX KÄNNER INTE IGEN THIS.PROPS.TOGGLELIST();
+    //FÖRSÖKER KALLA PÅ DENNA FRÅN BUTTONLINK. BUTTONLINK FUNKAR, MEN THIS.PROPS.TOGGLELIST() FUNKAR INTE;
     handleonClick = () => {
-        console.log('so far working');
+        console.log(this.props.toggleList());
         this.props.toggleList();
     }
 
@@ -44,4 +44,4 @@ class NavBar extends Component {
     };
   };
   
-  export default connect(mapDispatchToProps)(NavBar);
+  export default connect(null, mapDispatchToProps)(NavBar);
