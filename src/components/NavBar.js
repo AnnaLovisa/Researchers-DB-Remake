@@ -5,7 +5,7 @@ import Header from './header'
 import ButtonLink from './button_link';
 
 class NavBar extends Component {
-    //FÖRSÖKER KALLA PÅ DENNA FRÅN BUTTONLINK. BUTTONLINK FUNKAR, MEN THIS.PROPS.TOGGLELIST() FUNKAR INTE;
+
     handleonClick = () => {
         this.props.toggleList();
     }
@@ -16,7 +16,7 @@ class NavBar extends Component {
 
     return (
       <div className="row d-flex justify-content-between p-2 navigation-style">
-        {/*This should only appear for admins*/}
+        
         <div className="col-xs-2">
             <Header />
             
@@ -27,6 +27,7 @@ class NavBar extends Component {
             {/* <ButtonLink handleButtonClick={props.handleButtonClick} buttonLabels="grid" displayIcon="fa fa-th"></ButtonLink> */}
             {/* <div className="row ">
                 <div className="col-xs-12">
+                    This should only appear for admins
                     <ButtonLink handleButtonClick={props.handleButtonClick} buttonLabels="Add new researcher"></ButtonLink>
                 </div>
             </div> */}
@@ -35,8 +36,6 @@ class NavBar extends Component {
     )};
 }
 
-  //DISPATCH AV TOGGLEDISPLAY SOM SKICKAS TILL ACTION/DISPLAY_ACTIONS
-  //REFERERAR TILL TOGGLELIST I DENNA FUNKTION
   function mapDispatchToProps(dispatch) {
     return {
       toggleList: () => dispatch(toggleDisplay())

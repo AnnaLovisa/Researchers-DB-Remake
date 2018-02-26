@@ -1,5 +1,5 @@
 import { RESEARCHER_ITEMS_HAS_ERRORED, RESEARCHER_ITEMS_IS_LOADING, RESEARCHER_ITEMS_FETCH_DATA_SUCCESS } from './actionTypes';
-
+import { RESEARCHER_ITEMS_ARE_EMPTY } from './actionTypes';
 
 //Actioncreators for researcherActions
 
@@ -44,3 +44,18 @@ export function researcherItemsFetchData(url) {
   };
 
 }
+
+export function emptyItems(researcherItems) {
+    return {
+        type: RESEARCHER_ITEMS_ARE_EMPTY,
+        researcherItems
+    }
+}
+
+export function  researcherItemsEmptyData() {
+    return (dispatch) => {
+        dispatch(emptyItems([]));
+    }
+}
+
+

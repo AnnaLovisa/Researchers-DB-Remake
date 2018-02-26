@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import ResearcherDetails from './researcher_details';
-import { researcherItemsFetchData } from '../actions/researcher_actions'; //Här ska fler actions läggas till sen
+import { researcherItemsFetchData, researcherItemsEmptyData } from '../actions/researcher_actions'; //Här ska fler actions läggas till sen
 import Button from '../components/button';
 import { ROOT_URL } from '../actions/shared';
 
@@ -13,8 +13,8 @@ class DisplayResearchers extends Component {
     this.props.fetchData(ROOT_URL);
   }
 
-  handleonResetClick = () => {
-    //Reset state of  to an empty array
+  resetonClick = () => {
+    this.props.emptyData();
   }
 
   
@@ -59,7 +59,7 @@ class DisplayResearchers extends Component {
 
 //Dessa nya states kommer från reducern
 function mapStateToProps(state) {
-  console.log(state.toggleDisplay);
+  console.log(state.researcherItems);
   return { 
     researcherItems: state.researcherItems,
     hasErrored: state.researcherItemsHasErrored,
@@ -70,7 +70,8 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    fetchData: (url) => dispatch(researcherItemsFetchData(url))
+    fetchData: (url) => dispatch(researcherItemsFetchData(url)),
+    emptyData: () => dispatch(researcherItemsEmptyData())
   };
 };
 
