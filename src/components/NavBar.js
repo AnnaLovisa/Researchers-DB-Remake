@@ -5,7 +5,7 @@ import Header from './header'
 import ButtonLink from './button_link';
 
 class NavBar extends Component {
-
+    //FÖRSÖKER KALLA PÅ DENNA FRÅN BUTTONLINK. BUTTONLINK FUNKAR, MEN REDUX KÄNNER INTE IGEN THIS.PROPS.TOGGLELIST();
     handleonClick = () => {
         console.log('so far working');
         this.props.toggleList();
@@ -36,7 +36,8 @@ class NavBar extends Component {
     )};
 }
 
-  
+  //DISPATCH AV TOGGLEDISPLAY SOM SKICKAS TILL ACTION/DISPLAY_ACTIONS
+  //REFERERAR TILL TOGGLELIST I DENNA FUNKTION
   function mapDispatchToProps(dispatch) {
     return {
       toggleList: () => dispatch(toggleDisplay())

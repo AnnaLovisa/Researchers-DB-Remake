@@ -23,9 +23,9 @@ class DisplayResearchers extends Component {
     this.props.toggleList();
    
   } */
-
+  
   render() {
-    
+
     this.handleonClick = this.handleonClick.bind(this);
    /*  this.handleonResetClick = this.handleonResetClick.bind(this);
     this.handleonButtonClick = this.handleonButtonClick.bind(this); */
@@ -67,8 +67,8 @@ function mapStateToProps(state) {
     researcherItems: state.researcherItems,
     hasErrored: state.researcherItemsHasErrored,
     isLoading: state.researcherItemsIsLoading,
-    showList: state.toggleDisplay
-    
+    showList: state.toggleDisplay   //REFERERAR FUNKTIONEN FRÅN COMBINE REDUCERN TILL DET NYA STATET SOM SHOWLIST
+    //MEN DENNA KAN JAG INTE KONSOLLOGGA UT. SHOWLIST BLIR ALLTSÅ INTE TRUE (?) 
   };
 }
 

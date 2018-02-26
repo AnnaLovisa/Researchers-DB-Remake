@@ -8,7 +8,7 @@ export function toggleDisplaySuccess(bool) {
       showList: bool
   };
 }
-
+//FUNKTIONEN SOM JAG FÖRSÖKER DISPATCHA I NAVBAR OCH SOM I SIN TUR KALLAR PÅ TOGGLEDISPLAYSUCCESS SOM ÄNDRAR STATET TILL TRUE
 export function toggleDisplay() {
   return (dispatch) => {
       dispatch(toggleDisplaySuccess(true));   
