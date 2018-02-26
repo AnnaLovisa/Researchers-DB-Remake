@@ -7,7 +7,6 @@ import ButtonLink from './button_link';
 class NavBar extends Component {
     //FÖRSÖKER KALLA PÅ DENNA FRÅN BUTTONLINK. BUTTONLINK FUNKAR, MEN THIS.PROPS.TOGGLELIST() FUNKAR INTE;
     handleonClick = () => {
-        console.log(this.props.toggleList());
         this.props.toggleList();
     }
 

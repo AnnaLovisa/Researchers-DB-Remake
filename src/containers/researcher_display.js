@@ -30,11 +30,14 @@ class DisplayResearchers extends Component {
    /*  this.handleonResetClick = this.handleonResetClick.bind(this);
     this.handleonButtonClick = this.handleonButtonClick.bind(this); */
 
-    //const listClass = showList ? 'col-sm-12 col-md-12 col-lg-12 list-group' : 'col-sm-12 col-md-4 col-lg-2 researcher-card-style shadow-style m-4'; 
-    const researcher = this.props.researcherItems
-    
+    console.log(this.props.showList); //visar true vid knapptryck
+    const displayClass = this.props.showList ? 'col-sm-4 col-md-4 col-lg-4 list-group' : 'col-sm-12 col-md-4 col-lg-2 researcher-card-style shadow-style m-4';    
+    const displayContainer = this.props.showList ? 'row d-flex flex-column align-items-center' : 'row display-researchers-style d-flex justify-content-center';
+    const displayItem = this.props.showList ? 'item list-group-item' : 'item';
+  
+    const researcher = this.props.researcherItems   
     const researchers = this.props.researcherItems.map((item, index) => {
-      return <ResearcherDetails key={index} details={item} />
+      return <ResearcherDetails key={index} details={item} displayClass={displayClass} displayItem={displayItem} />
     })
    
     if (this.props.hasErrored) {
@@ -54,7 +57,9 @@ class DisplayResearchers extends Component {
           {/* <ButtonLink onClick={this.handleonButtonClick} buttonLabels="test" /> */}
           </div>     
         {/*Rendering out the state of the researchers*/}
-        <div className="row display-researchers-style d-flex justify-content-center">{researchers}</div>
+        <div className={displayContainer}>
+          {researchers}
+        </div>
       </div>
     )
     /* ButtonLink.props.onClick(this.handleonButtonClick); */

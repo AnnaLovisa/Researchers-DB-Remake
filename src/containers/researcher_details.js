@@ -1,9 +1,12 @@
 import React from 'react';
 
-const ResearcherDetails = ({details}) => {
+
+const ResearcherDetails = ({details, displayClass, displayItem}) => {
+  
   return (
-    <div className='col-xs-2'>
-      <div className='item'>
+
+    <div className={displayClass}>
+      <div className={displayItem}>
         <p><strong>Name: </strong> {details.name}</p>
       </div>
       <div className='item'>
@@ -29,6 +32,7 @@ const ResearcherDetails = ({details}) => {
         <p><a href='${details.website}'>Visit website</a></p>
       </div>
     </div>
+
   )  
 }
 
