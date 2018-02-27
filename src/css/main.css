@@ -1,3 +1,7 @@
+.slide {
+  overflow: hidden;
+  transition: max-height 0.25s ease-out; }
+
 body, html {
   overflow-x: hidden; }
 

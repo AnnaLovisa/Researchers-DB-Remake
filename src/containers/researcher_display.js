@@ -8,6 +8,9 @@ import { ROOT_URL } from '../actions/shared';
 
 class DisplayResearchers extends Component {
   
+  state = {
+    showDetails: false
+  }
      
   handleonClick = () => {  
     this.props.fetchData(ROOT_URL);
@@ -17,20 +20,37 @@ class DisplayResearchers extends Component {
     this.props.emptyData();
   }
 
+  toggleDetails = () => {
+    this.setState({ showDetails: !this.state.showDetails });
+  }
   
   render() {
 
     this.handleonClick = this.handleonClick.bind(this);
     this.resetonClick = this.resetonClick.bind(this);
 
-    console.log(this.props.showList); //visar true vid knapptryck
-    const displayClass = this.props.showList ? 'col-sm-4 col-md-4 col-lg-4 list-group' : 'col-sm-12 col-md-4 col-lg-2 researcher-card-style shadow-style m-4';    
+    const displayClass = this.props.showList ? 'col-sm-4 col-md-4 col-lg-4 list-group slide' : 'col-sm-12 col-md-4 col-lg-2 researcher-card-style shadow-style m-4';    
     const displayContainer = this.props.showList ? 'row d-flex flex-column align-items-center' : 'row display-researchers-style d-flex justify-content-center';
-    const displayItem = this.props.showList ? 'item list-group-item' : 'item';
-  
+    const displayItem = this.props.showList ? 'item' : 'item';
+    
+    const { showDetails } = this.state;
+    const showList = this.props.showList;
+
+    const showDetailsButton = (
+      <a role="button" style={{textDecoration: 'underline'}} onClick={this.toggleDetails}>
+        {showDetails ? 'Hide details' : 'Show details'}
+      </a>
+    );
+    console.log()
     const researcher = this.props.researcherItems   
     const researchers = this.props.researcherItems.map((item, index) => {
-      return <ResearcherDetails key={index} details={item} displayClass={displayClass} displayItem={displayItem} />
+      return <ResearcherDetails key={index}
+                                details={item}
+                                displayClass={displayClass}
+                                displayItem={displayItem}
+                                open={showDetails}
+                                detailsButton={showDetailsButton}
+                                listForm={showList} />
     })
    
     if (this.props.hasErrored) {
