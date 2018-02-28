@@ -1,23 +1,27 @@
 import React from 'react';
 
 
-const ResearcherDetails = ({details, displayClass, displayItem, open, listForm, detailsButton}) => {
-console.log(listForm)
-console.log(open)
+const ResearcherDetails = ({details, displayClass, displayItem, open, listForm, detailsButton, itemId}) => {
+
+console.log(details.id)
+console.log(itemId)
+
 
     let listStyle;
-    if(listForm){
-      if(open){
-        listStyle = {maxHeight: "400px"};
+    if(listForm && details.id === itemId){
+        if(open){
+            listStyle = {maxHeight: "400px"};
+          } 
+        else {
+          listStyle = {maxHeight: "0px"};
+        }
+
       }
-      else{
-        listStyle = {maxHeight: "0px"};
-      }
-    }
     else {
       listStyle = {};
     }
-    console.log(listStyle);
+
+    
 
   return (
           <div className={displayClass} >
@@ -27,7 +31,7 @@ console.log(open)
 {listForm && <div>
                 <p>{detailsButton}</p>
               </div>}
-               <div className='slide' style={listStyle}>
+ <div className='slide' style={listStyle} id={details.id}>
                         <div className='item'>
                           <p><strong>Institution: </strong> {details.institution}</p>
                         </div>
@@ -53,6 +57,6 @@ console.log(open)
                   </div>
               </div>
   )}  
-
+/*{details.id === itemId && */
 
 export default ResearcherDetails;

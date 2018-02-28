@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import ResearcherDetails from './researcher_details';
 import { researcherItemsFetchData, researcherItemsEmptyData } from '../actions/researcher_actions'; //Här ska fler actions läggas till sen
+import { toggleDetails } from '../actions/display_actions';
 import Button from '../components/button';
 import { ROOT_URL } from '../actions/shared';
 
@@ -9,7 +10,8 @@ import { ROOT_URL } from '../actions/shared';
 class DisplayResearchers extends Component {
   
   state = {
-    showDetails: false
+    showDetails: false,
+    itemId: ''
   }
      
   handleonClick = () => {  
@@ -20,9 +22,10 @@ class DisplayResearchers extends Component {
     this.props.emptyData();
   }
 
-  toggleDetails = () => {
-    this.setState({ showDetails: !this.state.showDetails });
+  toggleDetails = (id) => {
+    this.setState({ showDetails: !this.state.showDetails, itemId: id });
   }
+
   
   render() {
 
@@ -33,24 +36,27 @@ class DisplayResearchers extends Component {
     const displayContainer = this.props.showList ? 'row d-flex flex-column align-items-center' : 'row display-researchers-style d-flex justify-content-center';
     const displayItem = this.props.showList ? 'item' : 'item';
     
-    const { showDetails } = this.state;
+    const { showDetails, itemId } = this.state;
     const showList = this.props.showList;
 
-    const showDetailsButton = (
-      <a role="button" style={{textDecoration: 'underline'}} onClick={this.toggleDetails}>
-        {showDetails ? 'Hide details' : 'Show details'}
-      </a>
-    );
-    console.log()
-    const researcher = this.props.researcherItems   
+    const researcher = this.props.researcherItems
+
     const researchers = this.props.researcherItems.map((item, index) => {
+      //ändrat från showDetails till showmoredetails i redux
+      const showDetailsButton = (
+        <a role="button" style={{textDecoration: 'underline'}} onClick={() => this.toggleDetails(item.id)} id={item.id} >
+          {showDetails && item.id === this.state.itemId ? 'Hide details' : 'Show details'} 
+        </a>
+      );
+      //Ändrat till showMoredetails
       return <ResearcherDetails key={index}
                                 details={item}
                                 displayClass={displayClass}
                                 displayItem={displayItem}
                                 open={showDetails}
                                 detailsButton={showDetailsButton}
-                                listForm={showList} />
+                                listForm={showList}
+                                itemId={itemId} />
     })
    
     if (this.props.hasErrored) {
@@ -79,7 +85,6 @@ class DisplayResearchers extends Component {
 
 //Dessa nya states kommer från reducern
 function mapStateToProps(state) {
-  console.log(state.researcherItems);
   return { 
     researcherItems: state.researcherItems,
     hasErrored: state.researcherItemsHasErrored,
