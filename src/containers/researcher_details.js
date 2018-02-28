@@ -3,22 +3,22 @@ import React from 'react';
 
 const ResearcherDetails = ({details, displayClass, displayItem, open, listForm, detailsButton, itemId}) => {
 
-console.log(details.id)
-console.log(itemId)
-
 
     let listStyle;
-    if(listForm && details.id === itemId){
-        if(open){
-            listStyle = {maxHeight: "400px"};
-          } 
-        else {
-          listStyle = {maxHeight: "0px"};
-        }
+    if(!listForm){
+      listStyle = {minHeight: "400px"}
+    }
+    else if(listForm && details.id === itemId){
+            if(open){
+                listStyle = {maxHeight: "400px"};
+              } 
+            else {
+              listStyle = {maxHeight: "0px"};
+            }
 
       }
     else {
-      listStyle = {};
+      listStyle = {maxHeight: "0px"};
     }
 
     
@@ -31,7 +31,7 @@ console.log(itemId)
 {listForm && <div>
                 <p>{detailsButton}</p>
               </div>}
- <div className='slide' style={listStyle} id={details.id}>
+              <div className='slide' style={listStyle} id={details.id}>
                         <div className='item'>
                           <p><strong>Institution: </strong> {details.institution}</p>
                         </div>
@@ -57,6 +57,6 @@ console.log(itemId)
                   </div>
               </div>
   )}  
-/*{details.id === itemId && */
+
 
 export default ResearcherDetails;

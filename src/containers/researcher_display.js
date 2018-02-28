@@ -20,6 +20,7 @@ class DisplayResearchers extends Component {
 
   resetonClick = () => {
     this.props.emptyData();
+    this.setState({ showDetails: false })
   }
 
   toggleDetails = (id) => {
