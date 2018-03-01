@@ -72,8 +72,8 @@ class DisplayResearchers extends Component {
      
       <div>
         <div className="row display-researchers-style d-flex justify-content-center mt-4">
-          <Button handleonClick={this.handleonClick} buttonLabels="Show all" />
-          <Button handleonClick={this.resetonClick} buttonLabels="Reset" /> 
+          <Button type="button" handleonClick={this.handleonClick} buttonLabels="Show all" />
+          <Button type="button" handleonClick={this.resetonClick} buttonLabels="Reset" /> 
           </div>     
         {/*Rendering out the state of the researchers*/}
         <div className={displayContainer}>

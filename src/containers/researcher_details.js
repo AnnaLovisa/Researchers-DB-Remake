@@ -1,6 +1,6 @@
 import React from 'react';
 
-
+//Flytta hela denna till components-mappen sen
 const ResearcherDetails = ({details, displayClass, displayItem, open, listForm, detailsButton, itemId}) => {
 
 
