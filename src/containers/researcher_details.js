@@ -15,7 +15,6 @@ const ResearcherDetails = ({details, displayClass, displayItem, open, listForm, 
             else {
               listStyle = {maxHeight: "0px"};
             }
-
       }
     else {
       listStyle = {maxHeight: "0px"};

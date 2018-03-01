@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { toggleDisplayList, toggleDisplayGrid } from '../actions/display_actions';
+import { Link } from 'react-router-dom';
 import Header from './header'
 import ButtonLink from './button_link';
 
@@ -30,12 +31,12 @@ class NavBar extends Component {
             <strong>Display</strong>
             <ButtonLink onClick={this.makeList} buttonLabels="list" displayIcon="fa fa-th-list"></ButtonLink>
             <ButtonLink onClick={this.makeGrid} buttonLabels="grid" displayIcon="fa fa-th"></ButtonLink>
-            {/* <div className="row ">
+            <div className="row ">
                 <div className="col-xs-12">
-                    This should only appear for admins
-                    <ButtonLink handleButtonClick={props.handleButtonClick} buttonLabels="Add new researcher"></ButtonLink>
+                    {/*This should only appear for admins*/}
+                    <Link to="/addResearcher">Add new researcher</Link>
                 </div>
-            </div> */}
+            </div>
         </div>
       </div>
     )};

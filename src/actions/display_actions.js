@@ -1,21 +1,21 @@
 import { TOGGLE_DISPLAY } from '../actions/actionTypes';
 
-//Actioncreators for researcherActions
+//Actioncreators for displayActions
 
-export function toggleDisplaySuccess(bool) {
+export const toggleDisplaySuccess = (bool) => {
   return {
       type: TOGGLE_DISPLAY,
       showList: bool
   };
 }
 
-export function toggleDisplayList() {
+export const toggleDisplayList = () => {
   return (dispatch) => {
       dispatch(toggleDisplaySuccess(true));   
     }
   }
 
-  export function toggleDisplayGrid() {
+  export const toggleDisplayGrid = () => {
     return (dispatch) => {
       dispatch(toggleDisplaySuccess(false));
     }
