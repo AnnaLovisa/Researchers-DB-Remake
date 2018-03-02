@@ -1,14 +1,19 @@
 import React from 'react';
 
-export const TextField = ({ label, input }) => {
-  console.log('inputStuff: ', input);
+export const TextField = props => {
+  console.log('inputStuff: ', props.input);
   return (
     <div>
       <div>
-        {label}
+        {props.label}
       </div>
       <div>
-        <input {...input} placeholder={label} type="text" />
+        <input {...props.input} placeholder={props.label} type="text" />
+        {props.meta && props.meta.error && props.meta.touched && (
+        <div style={{fontColor: "red", fontFamily: "sans-serif"}}>
+          {props.meta.error}
+        </div>
+      )}
       </div>
     </div>
   );

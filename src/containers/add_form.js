@@ -1,8 +1,9 @@
 import React from 'react';
-import { reduxForm } from 'redux-form';
+import { connect } from 'react-redux';
+import { reduxForm, getFormValues } from 'redux-form';
 import AddFormComponent from '../components/add_form';
 
-export const AddForm = ({ handleSubmit }) => {
+export const AddForm = props => {
 
   const submitForm = (formValues) => {
     console.log('submitting form', formValues);
@@ -10,17 +11,27 @@ export const AddForm = ({ handleSubmit }) => {
 
   return (
     <AddFormComponent
+      formValues={props.formValues}
+      change={props.change}
       onSubmit={submitForm}
-      handleSubmit={handleSubmit}
+      handleSubmit={props.handleSubmit}
     />
   );
 }
 
+const mapStateToProps = state => ({
+  formValues: getFormValues('my-form')(state)
+})
+
 const formConfiguration = {
-  form: 'my-very-own-form'
+  form: 'my-form'
 }
 
-export default reduxForm(formConfiguration)(AddForm);
+
+export default connect(mapStateToProps)(
+  reduxForm(formConfiguration)(AddForm)
+)
+
 
 
 
