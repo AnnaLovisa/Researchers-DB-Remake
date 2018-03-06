@@ -9,10 +9,6 @@ export const TextField = props => {
       </div>
       <div>
         <input {...props.input} placeholder={props.label} type="text" />
-        {props.meta && props.meta.error && props.meta.touched && (
-        <div style={{fontColor: "red", fontFamily: "sans-serif"}}>
-          {props.meta.error}
-        </div>
       )}
       </div>
     </div>

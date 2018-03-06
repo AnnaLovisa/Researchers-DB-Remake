@@ -1,6 +1,6 @@
 import { createStore, combineReducers } from 'redux';
 import { reducer as formReducer } from 'redux-form';
-import { researcherItems, researcherItemsIsLoading, researcherItemsHasErrored } from './researcher_reducer';
+import { researcherItems, researcherItemsIsLoading, researcherItemsHasErrored, filterItems } from './researcher_reducer';
 import { toggleDisplay } from './display_reducer';
 
 
@@ -9,7 +9,8 @@ const rootReducer = combineReducers({
   researcherItemsIsLoading,
   researcherItemsHasErrored,
   toggleDisplay,
-  form: formReducer     //mounted at 'form'
+  filterItems
+  /* form: formReducer  */   //mounted at 'form'
 });
 
 export default rootReducer;

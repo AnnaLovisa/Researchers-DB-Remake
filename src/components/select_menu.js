@@ -3,6 +3,7 @@ import React from 'react';
 export const SelectMenu = props => {
 
   const renderSelectOptions = (key, index) => {
+    console.log(props)
     return (
       <option
         key={`${index}-${key}`}

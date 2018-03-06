@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import ResearcherDetails from './researcher_details';
-import { researcherItemsFetchData, researcherItemsEmptyData } from '../actions/researcher_actions'; //Här ska fler actions läggas till sen
+import { researcherItemsFetchData, researcherItemsEmptyData, researcherItemsFilterData } from '../actions/researcher_actions'; //Här ska fler actions läggas till sen
 import { toggleDetails } from '../actions/display_actions';
-import Button from '../components/button';
 import { ROOT_URL } from '../actions/shared';
+import SearchForm from '../components/search_form';
+import SelectMenu from '../components/select_menu';
+import ResearcherDetails from './researcher_details';
+import Button from '../components/button';
 
 
 class DisplayResearchers extends Component {
@@ -27,6 +29,11 @@ class DisplayResearchers extends Component {
     this.setState({ showDetails: !this.state.showDetails, itemId: id });
   }
 
+/*   handleonChange = () => {
+    console.log("hej");
+    this.props.filterData(ROOT_URL);
+  } */
+
   
   render() {
 
@@ -39,6 +46,9 @@ class DisplayResearchers extends Component {
     
     const { showDetails, itemId } = this.state;
     const showList = this.props.showList;
+
+    const filterItems = this.props.showFilteredItems;
+    console.log(filterItems);
 
     const researcher = this.props.researcherItems
 
@@ -71,9 +81,11 @@ class DisplayResearchers extends Component {
     return (
      
       <div>
-        <div className="row display-researchers-style d-flex justify-content-center mt-4">
+        <div className="row display-researchers-style d-flex justify-content-left mt-4">
           <Button type="button" handleonClick={this.handleonClick} buttonLabels="Show all" />
-          <Button type="button" handleonClick={this.resetonClick} buttonLabels="Reset" /> 
+          <Button type="button" handleonClick={this.resetonClick} buttonLabels="Reset" />
+          
+            <SearchForm />
           </div>     
         {/*Rendering out the state of the researchers*/}
         <div className={displayContainer}>
@@ -90,19 +102,18 @@ function mapStateToProps(state) {
     researcherItems: state.researcherItems,
     hasErrored: state.researcherItemsHasErrored,
     isLoading: state.researcherItemsIsLoading,
-    showList: state.toggleDisplay
+    showList: state.toggleDisplay,
+    showFilteredItems: state.filterItems
   };
 }
 
 function mapDispatchToProps(dispatch) {
   return {
     fetchData: (url) => dispatch(researcherItemsFetchData(url)),
-    emptyData: () => dispatch(researcherItemsEmptyData())
+    emptyData: () => dispatch(researcherItemsEmptyData()),
+    /* filterData: (url) => dispatch(researcherItemsFilterData(url)) */
   };
 };
-
-
-
 
 export default connect(mapStateToProps, mapDispatchToProps)(DisplayResearchers);
 
