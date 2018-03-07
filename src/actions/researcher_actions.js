@@ -1,6 +1,6 @@
 import { RESEARCHER_ITEMS_HAS_ERRORED, RESEARCHER_ITEMS_IS_LOADING, RESEARCHER_ITEMS_FETCH_DATA_SUCCESS, TEST } from './actionTypes';
 import { RESEARCHER_ITEMS_ARE_EMPTY } from './actionTypes';
-import { RESEARCHER_ITEMS_FILTER_BY_GROUP } from './actionTypes';
+import { RESEARCHER_ITEMS_FILTER_BY_GROUP, RESEARCHER_ITEMS_ARE_FILTERED } from './actionTypes';
 
 //Actioncreators for researcherActions
 
@@ -59,13 +59,16 @@ export function  researcherItemsEmptyData() {
     }
 }
 
+export function researcherItemsFilterData(selectedGroup) {
+    return (dispatch) => {
+        dispatch(filterItemsByGroup(selectedGroup));
+    }
+}
+
 export function filterItemsByGroup(group) {
     return (dispatch, getState) => {
-        const state = getState().researcherItems;
-        /*const res = state.filter(item =>
-          item.workingGroup.includes(group)
-        ); */
-        const res = state.map(item => {
+        const state = getState().researcherItems; //det är researcherItems mitt hämtade state ligger i
+        const filteredItems = state.map(item => {
             let match = false;
             item.workingGroup.forEach(value => {
                 if (value.toLowerCase() === group.toLowerCase()) {
@@ -75,18 +78,13 @@ export function filterItemsByGroup(group) {
             return match ? item : false
              
         }).filter(item => item !== false)
-        console.log(res);
+        console.log(filteredItems);
 
         dispatch({
-            type: TEST,
-            state: state
+            type: RESEARCHER_ITEMS_FILTER_BY_GROUP,
+            filteredItems: filteredItems    //På vänstra sidan är namnet jag skickar till reducern. På högra sidan är variabeln jag samlar allt i
         })
-}
-    //skriver ut pko yaaayyy
-   /*  return {
-        type: RESEARCHER_ITEMS_FILTER_BY_GROUP,
-        workingGroup
-    } */
+    }
 }
 
 /* export function filterItemsByRegion(regionOfExpertise) {
@@ -103,10 +101,13 @@ export function filterItemsByField(fieldOfResearch) {
     }
 } */
 
-export function researcherItemsFilterData(workingGroup) {
-    return (dispatch) => {
-        dispatch(filterItemsByGroup(workingGroup));
+export function researcherItemsAreFiltered(bool) {
+    return {
+        type: RESEARCHER_ITEMS_ARE_FILTERED,
+        isFiltered: bool
     }
 }
+
+
 
 

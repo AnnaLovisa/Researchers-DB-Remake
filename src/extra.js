@@ -61,3 +61,109 @@ export default function (state = [], action) {
     payload: researcher
   };
 } */
+
+//const onSubmit = (values, dispatch) => {
+  //dispatch(  )  // your submit action //      );
+//};
+
+/* export default connect()(reduxForm({
+  form: 'searchForm', 
+  onSubmit, 
+})(SearchForm)); */
+
+/* class SearchFormComponent extends Component {
+
+    handleSubmit = () => {
+      console.log('hej')
+    }
+
+    submitForm = (formValues) => {
+      console.log('submitting Form: ', formValues);
+    }
+
+  
+    render() {
+
+      this.submitForm = this.submitForm.bind(this);
+
+    return (
+
+      <form onSubmit={this.handleSubmit(this.submitForm)} className="d-flex">
+        <Button type="submit" buttonLabels="Submit" /> */
+        {/*<select onChange={this.onInputChange} >*/}   {/*hårdkodat. fixa sen*/}
+          {/*<option value = "">Select</option>
+          <option value ="1235">1235</option>
+          <option value="pko">PKO</option>
+          <option value="prevention">Prevention</option>
+        </select>*/}
+          {/* <Field
+            name="workingGroup"
+            label="Working Group"
+            component={SelectMenu}
+            options={{
+              1235: '1235',
+              pko: 'PKO',
+              prevention: 'Prevention'
+            }}
+           />
+          <select>   {/*hårdkodat. fixa sen*/}
+            {/* <option value="">Select</option>
+            <option value="1235">1235</option>
+            <option value="pko">PKO</option>
+            <option value="prevention">Prevention</option>
+          </select>
+         <Field
+          name="regionOfExpertise"
+          label="Region of Expertise"
+          component={SelectMenu}
+          options={{
+            afghanistan: 'Afghanistan',
+            africa: 'Africa',
+            asiaPacificRegion: 'Asia-Pacific Region'
+          }}
+        />
+        <Field
+          name="fieldOfResearch"
+          label="Field of Research"
+          component={SelectMenu}
+          options={{
+            conflicts: 'Conflicts',
+            ddr: 'DDR',
+            gender: 'Gender'
+          }}
+        /> */
+        /*   <button type="submit">Submit</button>
+      </form>
+  )};
+}
+
+const mapStateToProps = state => ({
+  formValues: getFormValues('searchForm')(state),
+});
+ */
+
+//Decorate with redux-form
+//SearchFormComponent = reduxForm({
+  //form: 'searchForm', // a unique identifier for this form
+
+//})(SearchFormComponent);
+
+// Decorate with connect to read form values
+//const selector = formValueSelector('searchForm') // <-- same as form name
+
+//SearchFormComponent = connect(
+  //state => {
+    // can select values individually
+    /* const workingGroup = selector(state, 'workingGroup')
+    const regionOfExpertise = selector(state, 'regionOfExpertise')
+    const fieldOfResearch = selector(state, 'fieldOfResearch')
+      return {
+        workingGroup,
+        regionOfExpertise,
+        fieldOfResearch
+    }
+  }
+ 
+)(SearchFormComponent)
+
+export default SearchFormComponent; */}

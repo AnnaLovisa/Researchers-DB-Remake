@@ -10,10 +10,11 @@ import Button from '../components/button';
 
 
 class DisplayResearchers extends Component {
-  
+
   state = {
     showDetails: false,
-    itemId: ''
+    itemId: '',
+    isFiltered: false
   }
      
   handleonClick = () => {  
@@ -29,11 +30,6 @@ class DisplayResearchers extends Component {
     this.setState({ showDetails: !this.state.showDetails, itemId: id });
   }
 
-/*   handleonChange = () => {
-    console.log("hej");
-    this.props.filterData(ROOT_URL);
-  } */
-
   
   render() {
 
@@ -48,18 +44,15 @@ class DisplayResearchers extends Component {
     const showList = this.props.showList;
 
     const filterItems = this.props.showFilteredItems;
-    console.log(filterItems);
-
     const researcher = this.props.researcherItems
 
-    const researchers = this.props.researcherItems.map((item, index) => {
-      //ändrat från showDetails till showmoredetails i redux
+    const researchers = researcher.map((item, index) => {
       const showDetailsButton = (
         <a role="button" style={{textDecoration: 'underline'}} onClick={() => this.toggleDetails(item.id)} id={item.id} >
           {showDetails && item.id === this.state.itemId ? 'Hide details' : 'Show details'} 
         </a>
       );
-      //Ändrat till showMoredetails
+
       return <ResearcherDetails key={index}
                                 details={item}
                                 displayClass={displayClass}
@@ -110,10 +103,15 @@ function mapStateToProps(state) {
 function mapDispatchToProps(dispatch) {
   return {
     fetchData: (url) => dispatch(researcherItemsFetchData(url)),
-    emptyData: () => dispatch(researcherItemsEmptyData()),
-    /* filterData: (url) => dispatch(researcherItemsFilterData(url)) */
+    emptyData: () => dispatch(researcherItemsEmptyData())
   };
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(DisplayResearchers);
+
+
+
+  //Toggla den och använd den sen för att alternera mellan att mappa ut från researchers och filteredResearchers
+  //Eller enklast vore kanske att lägga denna (som jag gjort i redux state) för att sen ta ut den här och använda den för att
+  //alternera mellan att mappa ut från researchers och filteredResearchers
 
