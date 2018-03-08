@@ -1,6 +1,6 @@
-import { RESEARCHER_ITEMS_HAS_ERRORED, RESEARCHER_ITEMS_IS_LOADING, RESEARCHER_ITEMS_FETCH_DATA_SUCCESS, TEST } from './actionTypes';
+import { RESEARCHER_ITEMS_HAS_ERRORED, RESEARCHER_ITEMS_IS_LOADING, RESEARCHER_ITEMS_FETCH_DATA_SUCCESS } from './actionTypes';
 import { RESEARCHER_ITEMS_ARE_EMPTY } from './actionTypes';
-import { RESEARCHER_ITEMS_FILTER_BY_GROUP, RESEARCHER_ITEMS_ARE_FILTERED } from './actionTypes';
+import { RESEARCHER_ITEMS_FILTER_BY_GROUP, RESEARCHER_ITEMS_FILTER_BY_REGION, RESEARCHER_ITEMS_FILTER_BY_FIELD, RESEARCHER_ITEMS_ARE_FILTERED } from './actionTypes';
 
 //Actioncreators for researcherActions
 
@@ -59,12 +59,36 @@ export function  researcherItemsEmptyData() {
     }
 }
 
-export function researcherItemsFilterData(selectedGroup) {
+
+
+export function researcherItemsAreFiltered(bool) {
+    return {
+        type: RESEARCHER_ITEMS_ARE_FILTERED,
+        isFiltered: bool
+    }
+}
+
+export function researcherItemsFilterDataByGroup(workingGroup) {
     return (dispatch) => {
-        dispatch(filterItemsByGroup(selectedGroup));
+        dispatch(filterItemsByGroup(workingGroup));
         dispatch(researcherItemsAreFiltered(true));
     }
 }
+
+export function researcherItemsFilterDataByRegion(regionOfExpertise) {
+    return (dispatch) => {
+        dispatch(filterItemsByRegion(regionOfExpertise));
+        dispatch(researcherItemsAreFiltered(true));
+    }
+}
+
+export function researcherItemsFilterDataByField(fieldOfResearch) {
+    return (dispatch) => {
+        dispatch(filterItemsByField(fieldOfResearch));
+        dispatch(researcherItemsAreFiltered(true));
+    }
+}
+
 
 export function filterItemsByGroup(group) {
     return (dispatch, getState) => {
@@ -83,29 +107,45 @@ export function filterItemsByGroup(group) {
 
         dispatch({
             type: RESEARCHER_ITEMS_FILTER_BY_GROUP,
-            filteredItems: filteredItems    //På vänstra sidan är namnet jag skickar till reducern. På högra sidan är variabeln jag samlar allt i
+            filteredItemsByGroup: filteredItems    //På vänstra sidan är namnet jag skickar till reducern. På högra sidan är variabeln jag samlar allt i
         })
     }
 }
 
-/* export function filterItemsByRegion(regionOfExpertise) {
-    return {
-        type: RESEARCHER_ITEMS_FILTER_BY_REGION,
-        regionOfExpertise
+export function filterItemsByRegion(region) {
+    return (dispatch, getState) => {
+        const state = getState().researcherItems; //det är researcherItems mitt hämtade state ligger i
+        const filteredItems = state.map(item => {
+            let match = false;
+                item.regionOfExpertise.forEach(value => {
+                   if (value.toLowerCase() === region.toLowerCase()) {
+                        match = true;
+                    }
+                })
+                return match ? item : false
+        }).filter(item => item !== false)
+        console.log(filteredItems);
+
+        dispatch({
+            type: RESEARCHER_ITEMS_FILTER_BY_REGION,
+            filteredItemsByRegion: filteredItems    //På vänstra sidan är namnet jag skickar till reducern. På högra sidan är variabeln jag samlar allt i
+        })
     }
 }
 
-export function filterItemsByField(fieldOfResearch) {
-    return {
-        type: RESEARCHER_ITEMS_FILTER_BY_FIELD,
-        fieldOfResearch
-    }
-} */
-
-export function researcherItemsAreFiltered(bool) {
-    return {
-        type: RESEARCHER_ITEMS_ARE_FILTERED,
-        isFiltered: bool
+export function filterItemsByField(field) {
+    return (dispatch, getState) => {
+        const state = getState().researcherItems; //det är researcherItems mitt hämtade state ligger i
+        let match = false;
+        const filteredItems = state.filter(item => {
+            if(item.fieldOfResearch.toLowerCase() === field.toLowerCase()) {               
+                return item
+                }
+            })
+        dispatch({
+            type: RESEARCHER_ITEMS_FILTER_BY_FIELD,
+            filteredItemsByField: filteredItems    //På vänstra sidan är namnet jag skickar till reducern. På högra sidan är variabeln jag samlar allt i
+        })
     }
 }
 

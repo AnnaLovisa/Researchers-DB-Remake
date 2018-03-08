@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { researcherItemsFetchData, researcherItemsEmptyData, researcherItemsFilterData } from '../actions/researcher_actions'; //Här ska fler actions läggas till sen
+import { researcherItemsFetchData, researcherItemsEmptyData } from '../actions/researcher_actions'; //Här ska fler actions läggas till sen
 import { toggleDetails } from '../actions/display_actions';
 import { ROOT_URL } from '../actions/shared';
 import SearchForm from '../components/search_form';
-import SelectMenu from '../components/select_menu';
 import ResearcherDetails from './researcher_details';
 import Button from '../components/button';
 
@@ -13,8 +12,7 @@ class DisplayResearchers extends Component {
 
   state = {
     showDetails: false,
-    itemId: '',
-    isFiltered: false
+    itemId: ''
   }
      
   handleonClick = () => {  
@@ -114,9 +112,4 @@ function mapDispatchToProps(dispatch) {
 
 export default connect(mapStateToProps, mapDispatchToProps)(DisplayResearchers);
 
-
-
-  //Toggla den och använd den sen för att alternera mellan att mappa ut från researchers och filteredResearchers
-  //Eller enklast vore kanske att lägga denna (som jag gjort i redux state) för att sen ta ut den här och använda den för att
-  //alternera mellan att mappa ut från researchers och filteredResearchers
 
