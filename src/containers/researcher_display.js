@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { researcherItemsFetchData, researcherItemsEmptyData } from '../actions/researcher_actions'; //Här ska fler actions läggas till sen
+import { researcherItemsFetchData, researcherItemsEmptyData, filterItemsEmptyData } from '../actions/researcher_actions'; //Här ska fler actions läggas till sen
 import { toggleDetails } from '../actions/display_actions';
 import { ROOT_URL } from '../actions/shared';
 import SearchForm from '../components/search_form';
@@ -21,6 +21,7 @@ class DisplayResearchers extends Component {
 
   resetonClick = () => {
     this.props.emptyData();
+    this.props.emptyFilterData();
     this.setState({ showDetails: false })
   }
 
@@ -106,7 +107,8 @@ function mapStateToProps(state) {
 function mapDispatchToProps(dispatch) {
   return {
     fetchData: (url) => dispatch(researcherItemsFetchData(url)),
-    emptyData: () => dispatch(researcherItemsEmptyData())
+    emptyData: () => dispatch(researcherItemsEmptyData()),
+    emptyFilterData: () => dispatch(filterItemsEmptyData())
   };
 };
 

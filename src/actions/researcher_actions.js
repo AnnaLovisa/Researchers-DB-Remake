@@ -1,5 +1,5 @@
 import { RESEARCHER_ITEMS_HAS_ERRORED, RESEARCHER_ITEMS_IS_LOADING, RESEARCHER_ITEMS_FETCH_DATA_SUCCESS } from './actionTypes';
-import { RESEARCHER_ITEMS_ARE_EMPTY } from './actionTypes';
+import { RESEARCHER_ITEMS_ARE_EMPTY, FILTER_ITEMS_ARE_EMPTY } from './actionTypes';
 import { RESEARCHER_ITEMS_FILTER_BY_GROUP, RESEARCHER_ITEMS_FILTER_BY_REGION, RESEARCHER_ITEMS_FILTER_BY_FIELD, RESEARCHER_ITEMS_ARE_FILTERED } from './actionTypes';
 
 //Actioncreators for researcherActions
@@ -53,12 +53,38 @@ export function emptyItems(researcherItems) {
     }
 }
 
+export function emptyFilteredGroupItems(filteredItemsByGroup) {
+    return {
+        type: FILTER_ITEMS_ARE_EMPTY,
+        filteredItemsByGroup
+    }
+}
+
+export function emptyFilteredRegionItems(filteredItemsByRegion) {
+    return {
+        type: FILTER_ITEMS_ARE_EMPTY,
+        filteredItemsByRegion
+    }
+}
+
+export function emptyFilteredFieldItems(filteredItemsByField) {
+    return {
+        type: FILTER_ITEMS_ARE_EMPTY,
+        filteredItemsByField
+    }
+}
+
 export function  researcherItemsEmptyData() {
     return (dispatch) => {
         dispatch(emptyItems([]));
     }
 }
 
+export function filterItemsEmptyData() {
+    return (dispatch) => {
+        dispatch(emptyFilteredGroupItems([]), emptyFilteredRegionItems([]), emptyFilteredFieldItems([]))
+    }
+}
 
 
 export function researcherItemsAreFiltered(bool) {
@@ -88,6 +114,7 @@ export function researcherItemsFilterDataByField(fieldOfResearch) {
         dispatch(researcherItemsAreFiltered(true));
     }
 }
+
 
 
 export function filterItemsByGroup(group) {
