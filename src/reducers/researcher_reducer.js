@@ -16,7 +16,6 @@ export function researcherItemsIsLoading(state = false, action) {
   switch (action.type) {
       case RESEARCHER_ITEMS_IS_LOADING:
           return action.isLoading;
-
       default:
           return state;
   }
@@ -32,21 +31,22 @@ export function researcherItems(state = [], action) {
           return state;
   }
 }
- export function filterItems(state = [], action) {
+ export function filterItems(state = [], action) { //Det är detta namn jag skickar med som mitt state i combined reducers
     switch (action.type) {
     case RESEARCHER_ITEMS_FILTER_BY_GROUP:
         console.log(action.filteredItems);
-        return action.filteredItems;
+        return action.filteredItems; 
     default:
         return state;
     }
     
 }
 
-export function researcherItemsAreFiltered(state = true, action) {
+export function researcherItemsAreFiltered(state = false, action) { //Det är detta namn jag skickar med som mitt state i combined reducers
     switch(action.type) {
         case RESEARCHER_ITEMS_ARE_FILTERED:
-            return action.isFiltered;
+            console.log(action.isFiltered)
+            return action.isFiltered; 
         default:
             return state;
     }

@@ -28,7 +28,7 @@ export function researcherItemsFetchDataSuccess(researcherItems) {
 export function researcherItemsFetchData(url) {
   return (dispatch) => {
       dispatch(researcherItemsIsLoading(true));
-
+      dispatch(researcherItemsAreFiltered(false));
       fetch(url)
           .then((response) => {
               if (!response.ok) {
@@ -62,6 +62,7 @@ export function  researcherItemsEmptyData() {
 export function researcherItemsFilterData(selectedGroup) {
     return (dispatch) => {
         dispatch(filterItemsByGroup(selectedGroup));
+        dispatch(researcherItemsAreFiltered(true));
     }
 }
 

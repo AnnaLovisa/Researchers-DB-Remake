@@ -1,6 +1,7 @@
 import { createStore, combineReducers } from 'redux';
 import { reducer as formReducer } from 'redux-form';
-import { researcherItems, researcherItemsIsLoading, researcherItemsHasErrored, filterItems, researcherItemsAreFiltered } from './researcher_reducer';
+import { researcherItems, researcherItemsIsLoading, researcherItemsHasErrored } from './researcher_reducer';
+import { filterItems, researcherItemsAreFiltered } from './researcher_reducer';
 import { toggleDisplay } from './display_reducer';
 
 

@@ -44,9 +44,13 @@ class DisplayResearchers extends Component {
     const showList = this.props.showList;
 
     const filterItems = this.props.showFilteredItems;
-    const researcher = this.props.researcherItems
+    const researcher = this.props.researcherItems;
+    const filtered = this.props.filtered; 
 
-    const researchers = researcher.map((item, index) => {
+    const item = !filtered ? researcher : filterItems;
+    console.log(item);
+
+    const researchers = item.map((item, index) => {
       const showDetailsButton = (
         <a role="button" style={{textDecoration: 'underline'}} onClick={() => this.toggleDetails(item.id)} id={item.id} >
           {showDetails && item.id === this.state.itemId ? 'Hide details' : 'Show details'} 
@@ -96,6 +100,7 @@ function mapStateToProps(state) {
     hasErrored: state.researcherItemsHasErrored,
     isLoading: state.researcherItemsIsLoading,
     showList: state.toggleDisplay,
+    filtered: state.researcherItemsAreFiltered,
     showFilteredItems: state.filterItems
   };
 }
