@@ -44,7 +44,7 @@ class SearchForm extends Component {
             <option value="Conflicts">Conflicts</option>
             <option value="DDR">DDR</option>
             <option value="Gender">Gender</option>
-            <option value="Governance%20%26%20Statebuilding">Governance & Statebuilding</option>
+            <option value="Governance &amp Statebuilding">Governance & Statebuilding</option>
         </select>
       </div>
 

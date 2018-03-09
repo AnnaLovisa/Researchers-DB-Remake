@@ -4,6 +4,7 @@ import { researcherItemsFetchData, researcherItemsEmptyData, filterItemsEmptyDat
 import { toggleDetails } from '../actions/display_actions';
 import { ROOT_URL } from '../actions/shared';
 import SearchForm from '../components/search_form';
+import SearchTextField from '../containers/search_textfield';
 import ResearcherDetails from './researcher_details';
 import Button from '../components/button';
 
@@ -47,7 +48,6 @@ class DisplayResearchers extends Component {
     const filtered = this.props.filtered; 
 
     const item = !filtered ? researcher : filterItems;
-    console.log(item);
 
     const researchers = item.map((item, index) => {
       const showDetailsButton = (
@@ -79,9 +79,9 @@ class DisplayResearchers extends Component {
       <div>
         <div className="row display-researchers-style d-flex justify-content-left mt-4">
           <Button type="button" handleonClick={this.handleonClick} buttonLabels="Show all" />
-          <Button type="button" handleonClick={this.resetonClick} buttonLabels="Reset" />
-          
+          <Button type="button" handleonClick={this.resetonClick} buttonLabels="Reset" />         
             <SearchForm />
+            <SearchTextField />
           </div>     
         {/*Rendering out the state of the researchers*/}
         <div className={displayContainer}>

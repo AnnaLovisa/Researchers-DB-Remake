@@ -1,6 +1,7 @@
 import { RESEARCHER_ITEMS_HAS_ERRORED, RESEARCHER_ITEMS_IS_LOADING, RESEARCHER_ITEMS_FETCH_DATA_SUCCESS } from './actionTypes';
 import { RESEARCHER_ITEMS_ARE_EMPTY, FILTER_ITEMS_ARE_EMPTY } from './actionTypes';
 import { RESEARCHER_ITEMS_FILTER_BY_GROUP, RESEARCHER_ITEMS_FILTER_BY_REGION, RESEARCHER_ITEMS_FILTER_BY_FIELD, RESEARCHER_ITEMS_ARE_FILTERED } from './actionTypes';
+import { FETCH_NAMES } from './actionTypes';
 
 //Actioncreators for researcherActions
 
@@ -34,9 +35,7 @@ export function researcherItemsFetchData(url) {
               if (!response.ok) {
                   throw Error(response.statusText);
               }
-
               dispatch(researcherItemsIsLoading(false));
-
               return response;
           })
           .then((response) => response.json())
@@ -82,8 +81,11 @@ export function  researcherItemsEmptyData() {
 
 export function filterItemsEmptyData() {
     return (dispatch) => {
-        dispatch(emptyFilteredGroupItems([]), emptyFilteredRegionItems([]), emptyFilteredFieldItems([]))
-    }
+        dispatch(
+        emptyFilteredGroupItems([]),
+        emptyFilteredRegionItems([]),
+        emptyFilteredFieldItems([])
+    )}
 }
 
 
@@ -114,8 +116,6 @@ export function researcherItemsFilterDataByField(fieldOfResearch) {
         dispatch(researcherItemsAreFiltered(true));
     }
 }
-
-
 
 export function filterItemsByGroup(group) {
     return (dispatch, getState) => {
@@ -175,6 +175,39 @@ export function filterItemsByField(field) {
         })
     }
 }
+
+
+export function researcherItemsFetchNamesSuccess(names) {
+    return {
+        type: FETCH_NAMES,
+        names
+    };
+  }
+
+export function researcherItemsFetchDataByName(url) {
+    return (dispatch) => {
+        dispatch(fetchName(url));
+    }
+}
+
+export function fetchName(url) {
+    return (dispatch) => {
+        dispatch(researcherItemsIsLoading(true));
+        dispatch(researcherItemsAreFiltered(false));
+        fetch(url)
+            .then((response) => {
+                if (!response.ok) {
+                    throw Error(response.statusText);
+                }
+                dispatch(researcherItemsIsLoading(false));
+                return response;
+            })
+            .then((response) => response.json())
+            .then((names) => dispatch(researcherItemsFetchNamesSuccess(names)))
+            .catch(() => dispatch(researcherItemsHasErrored(true)));
+    };
+}
+
 
 
 
