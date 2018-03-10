@@ -177,37 +177,6 @@ export function filterItemsByField(field) {
 }
 
 
-export function researcherItemsFetchNamesSuccess(names) {
-    return {
-        type: FETCH_NAMES,
-        names
-    };
-  }
-
-export function researcherItemsFetchDataByName(url) {
-    return (dispatch) => {
-        dispatch(fetchName(url));
-    }
-}
-
-export function fetchName(url) {
-    return (dispatch) => {
-        dispatch(researcherItemsIsLoading(true));
-        dispatch(researcherItemsAreFiltered(false));
-        fetch(url)
-            .then((response) => {
-                if (!response.ok) {
-                    throw Error(response.statusText);
-                }
-                dispatch(researcherItemsIsLoading(false));
-                return response;
-            })
-            .then((response) => response.json())
-            .then((names) => dispatch(researcherItemsFetchNamesSuccess(names)))
-            .catch(() => dispatch(researcherItemsHasErrored(true)));
-    };
-}
-
 
 
 
