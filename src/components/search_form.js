@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { researcherItemsFilterDataByGroup, researcherItemsFilterDataByRegion, researcherItemsFilterDataByField } from '../actions/researcher_actions';
+import { workingGroupValues } from '../values/groups';
 
 class SearchForm extends Component {
 
 
   handleChange = (event) => {
-    this.props.filterDataByGroup(event.target.value)    
+    this.props.filterDataByGroup(event.target.value) 
   }
 
   handleChange2 = (event) => {
@@ -17,12 +18,23 @@ class SearchForm extends Component {
     this.props.filterDataByField(event.target.value)
   }
 
+
   render() {
+    console.log(workingGroupValues);
+    const groupValues = workingGroupValues.map((item, key) => {
+      return <option key={key} value={item.value}>{item.name}</option>; 
+    })
 
 
   return (
 
       <div>
+        <select onChange={this.handleChange}>   {/*hårdkodat. fixa sen*/}
+            {groupValues}
+        </select>
+
+
+
         <select onChange={this.handleChange}>   {/*hårdkodat. fixa sen*/}
             <option value="">Select</option>
             <option value="1235">1235</option>
