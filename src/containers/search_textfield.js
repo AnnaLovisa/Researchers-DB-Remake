@@ -34,7 +34,7 @@ class SearchTextField extends Component {
       console.log(researchers);
       const names = researchers.map((item, index) => {
         if(searchTerm){
-            return item.name.includes(searchTerm) ? <li key={index}>{item.name}</li> : '';
+            return item.name.includes(searchTerm) ? <li key={index}>{item.name}, {item.workingGroup}</li> : '';
         }else{
             return 
                 <li key={index}>{item.name}</li>           

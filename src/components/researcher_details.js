@@ -1,8 +1,6 @@
 import React from 'react';
 
-//Flytta hela denna till components-mappen sen
 const ResearcherDetails = ({details, displayClass, displayItem, open, listForm, detailsButton, itemId}) => {
-
 
     let listStyle;
     if(!listForm){
@@ -21,7 +19,6 @@ const ResearcherDetails = ({details, displayClass, displayItem, open, listForm, 
     }
 
     
-
   return (
           <div className={displayClass} >
               <div className={displayItem}>

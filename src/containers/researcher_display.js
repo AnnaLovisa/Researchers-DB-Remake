@@ -3,9 +3,9 @@ import { connect } from 'react-redux';
 import { researcherItemsFetchData, researcherItemsEmptyData, filterItemsEmptyData } from '../actions/researcher_actions'; //Här ska fler actions läggas till sen
 import { toggleDetails } from '../actions/display_actions';
 import { ROOT_URL } from '../actions/shared';
-import SearchForm from '../components/search_form';
+import SearchForm from '../containers/search_form';
 import SearchTextField from '../containers/search_textfield';
-import ResearcherDetails from './researcher_details';
+import ResearcherDetails from '../components/researcher_details';
 import Button from '../components/button';
 
 
