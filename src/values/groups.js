@@ -1,5 +1,5 @@
 export const workingGroupValues = [
-  { value: '', name: 'Working Groups'},
+  { value: "", name: 'Working Groups'},
   { value: '1235', name: '1235'},
   { value: 'pko', name: 'PKO'},
   { value: 'prevention', name: 'Prevention'},

@@ -15,3 +15,16 @@
 .button-style:hover {
   background-color: $color-green;
 }
+
+.button-link-style {
+  background-color: transparent;
+  border: none;
+  max-height: 1rem;
+  max-width: auto;
+  &:focus {
+    border: none;
+  }
+  &:after {
+    border: none;
+  }
+}

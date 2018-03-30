@@ -21,7 +21,7 @@ const ResearcherDetails = ({details, displayClass, displayItem, open, listForm, 
     
   return (
           <div className={displayClass} >
-              <div className={displayItem}>
+              <div className={displayItem}> {/*displayItem*/}
                 <p><strong>Name: </strong> {details.name}</p>
               </div>
 {listForm && <div>

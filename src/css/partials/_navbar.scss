@@ -1,4 +1,21 @@
 .navigation-style {
   background-color: $color-grey;
-  height: 12vh;
+}
+
+.nav-container {
+  display: grid;
+  grid-template-columns: 18.75rem auto 12.5rem;  //300px & 200px
+  grid-template-rows: 7.5rem; //120px & 60px
+}
+
+.nav-item-a {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.nav-item-b {
+  grid-column: 3;
+  grid-row: 1;
+  display: flex;
+  justify-content: flex-end;
 }

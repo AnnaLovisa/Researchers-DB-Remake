@@ -1,0 +1,45 @@
+.search-item-a {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row: 1;
+  display: flex;
+  align-items: center;
+}
+
+.search-item-b {
+  grid-column: 2;
+  grid-row: 1;
+  display: flex;
+  align-items: center;
+}
+
+.search-item-c {
+  grid-column: 8;
+  grid-row: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.search-item-d {
+  grid-column: 1;
+  grid-row: 2;
+  display: flex;
+  align-items: center;
+}
+
+.search-item-e {
+  grid-column-start: 2;
+  grid-column-end: 6;
+  grid-row-start: 2;
+  grid-row-end: 2;
+  display: flex;
+  align-items: center;
+}
+
+.search-item-f {
+  grid-column: 8;
+  grid-row: 2;
+  display: flex;
+  align-items: center;
+}

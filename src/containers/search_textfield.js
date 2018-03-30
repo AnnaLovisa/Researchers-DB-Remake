@@ -31,7 +31,6 @@ class SearchTextField extends Component {
     render() {
 
       const { searchTerm, researchers } = this.state;
-      console.log(researchers);
       const names = researchers.map((item, index) => {
         if(searchTerm){
             return item.name.includes(searchTerm) ? <li key={index}>{item.name}, {item.workingGroup}</li> : '';
@@ -40,16 +39,17 @@ class SearchTextField extends Component {
                 <li key={index}>{item.name}</li>           
         }
     });
-    console.log(names);
+
 
     return (
       <div>
         <input type="text"
                name="searchTerm"
                placeholder="Search name"
-               size="50"
+               size="45"
                value={this.state.searchTerm}
                onChange={this.onChange}
+               className="search-input"
         />
         <div>
             <ul style={{listStyleType: "none"}}>{names}</ul>

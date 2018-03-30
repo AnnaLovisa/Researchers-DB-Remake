@@ -37,7 +37,7 @@ class SearchForm extends Component {
 
   return (
 
-      <div>
+      <div className="search-item-e">
         <select onChange={this.handleChange}>
             {groupValues}
         </select>

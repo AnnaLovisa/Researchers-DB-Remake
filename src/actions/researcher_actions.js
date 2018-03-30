@@ -1,7 +1,7 @@
 import { RESEARCHER_ITEMS_HAS_ERRORED, RESEARCHER_ITEMS_IS_LOADING, RESEARCHER_ITEMS_FETCH_DATA_SUCCESS } from './actionTypes';
 import { RESEARCHER_ITEMS_ARE_EMPTY, FILTER_ITEMS_ARE_EMPTY } from './actionTypes';
 import { RESEARCHER_ITEMS_FILTER_BY_GROUP, RESEARCHER_ITEMS_FILTER_BY_REGION, RESEARCHER_ITEMS_FILTER_BY_FIELD, RESEARCHER_ITEMS_ARE_FILTERED } from './actionTypes';
-import { FETCH_NAMES } from './actionTypes';
+
 
 //Actioncreators for researcherActions
 
@@ -130,7 +130,6 @@ export function filterItemsByGroup(group) {
             return match ? item : false
              
         }).filter(item => item !== false)
-        console.log(filteredItems);
 
         dispatch({
             type: RESEARCHER_ITEMS_FILTER_BY_GROUP,
@@ -151,19 +150,17 @@ export function filterItemsByRegion(region) {
                 })
                 return match ? item : false
         }).filter(item => item !== false)
-        console.log(filteredItems);
 
         dispatch({
             type: RESEARCHER_ITEMS_FILTER_BY_REGION,
-            filteredItemsByRegion: filteredItems    //På vänstra sidan är namnet jag skickar till reducern. På högra sidan är variabeln jag samlar allt i
+            filteredItemsByRegion: filteredItems
         })
     }
 }
 
 export function filterItemsByField(field) {
     return (dispatch, getState) => {
-        const state = getState().researcherItems; //det är researcherItems mitt hämtade state ligger i
-        let match = false;
+        const state = getState().researcherItems;
         const filteredItems = state.filter(item => {
             if(item.fieldOfResearch.toLowerCase() === field.toLowerCase()) {               
                 return item
@@ -171,7 +168,7 @@ export function filterItemsByField(field) {
             })
         dispatch({
             type: RESEARCHER_ITEMS_FILTER_BY_FIELD,
-            filteredItemsByField: filteredItems    //På vänstra sidan är namnet jag skickar till reducern. På högra sidan är variabeln jag samlar allt i
+            filteredItemsByField: filteredItems
         })
     }
 }

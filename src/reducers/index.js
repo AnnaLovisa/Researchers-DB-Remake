@@ -1,8 +1,8 @@
-import { createStore, combineReducers } from 'redux';
-import { reducer as formReducer } from 'redux-form';
+import { combineReducers } from 'redux';
 import { researcherItems, researcherItemsIsLoading, researcherItemsHasErrored } from './researcher_reducer';
 import { filterItems, researcherItemsAreFiltered } from './researcher_reducer';
 import { toggleDisplay } from './display_reducer';
+import { modalReducer } from './modal_reducer';
 
 
 const rootReducer = combineReducers({
@@ -11,7 +11,8 @@ const rootReducer = combineReducers({
   researcherItemsHasErrored,
   toggleDisplay,
   filterItems,
-  researcherItemsAreFiltered
+  researcherItemsAreFiltered,
+  modalReducer
 });
 
 export default rootReducer;

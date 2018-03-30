@@ -5,17 +5,20 @@ import NavBar from './components/navbar';
 import ResearcherList from './containers/researcher_list';
 import DisplaySearchMenu from './components/search_menus';*/
 import DisplayResearchers from './containers/researcher_display';
+import ModalRootContainer from './containers/modalroot_container';
 /*import Footer from './components/Footer'; */
 
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <div id="main">   {/*className="App"*/}
         <NavBar />
         {/* <SearchTextField /> */} 
         {/* <DisplaySearchMenu /> */}
         <DisplayResearchers />
+        <ModalRootContainer />
+        {this.props.children}
        {/*  <SearchBarComponent />
         <ResearcherList /> */}
       </div>

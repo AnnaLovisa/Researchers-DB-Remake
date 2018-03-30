@@ -9,7 +9,6 @@ export const TextField = props => {
       </div>
       <div>
         <input {...props.input} placeholder={props.label} type="text" />
-      )}
       </div>
     </div>
   );
